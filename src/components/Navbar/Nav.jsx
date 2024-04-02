@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-import { FaUser } from "react-icons/fa"; // Importa el icono de usuario
+import { FaUser } from "react-icons/fa"; 
 
 function Navbar() {
  const [menuState, setMenuState] = useState({
     open: false,
-    type: 'small' // 'small' para pantallas pequeñas, 'large' para pantallas grandes
+    type: 'small'
  });
 
  const closeModal = () => {
@@ -32,7 +32,7 @@ function Navbar() {
  }, []);
 
  return (
-    <nav className="flex items-center justify-between px-6 py-3 bg-amber-200 text-black">
+    <nav className="flex items-center justify-between px-9 py-8 bg-amber-200 text-black text-center">
       <div className="lg:hidden">
         <button onClick={toggleMenu} className="focus:outline-none">
           {menuState.open ? <FiX size={40} /> : <FiMenu size={30} />}
@@ -43,7 +43,6 @@ function Navbar() {
         <img src="/MT.png" alt="Logo" className="h-14 mx-auto" /> 
       </div>
 
-      {/* Icono de usuario en la parte derecha */}
       <div className="flex items-center">
         <FaUser size={24} />
       </div>
