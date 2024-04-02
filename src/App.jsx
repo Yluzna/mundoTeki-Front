@@ -1,6 +1,7 @@
-import NavBar from './components/Navbar/Nav'
 import './App.css'
+import NavBar from './components/Navbar/Nav'
 import Categories from './components/Categories/Categories'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
     <>
     <NavBar/>
     <Categories />
+    <Footer />
     </>
   )
 }
