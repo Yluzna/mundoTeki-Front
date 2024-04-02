@@ -1,0 +1,34 @@
+{
+    "articles": [
+      {
+          "title": "Google Podcasts shuts down tomorrow, April 2",
+          "description": "Building a podcast player into Google Search was always a weird plan.",
+          "content": "RIP Google Podcasts. Google's self-branded podcasting service shuts down tomorrow, April 2, and existing users have until July to export any subscriptions that are still on the service. Google originally announced the shutdown in September and has be... [2686 chars]",
+          "url": "https://arstechnica.com/gadgets/2024/04/google-podcasts-shuts-down-tomorrow-april-2/",
+          "image": "https://cdn.arstechnica.net/wp-content/uploads/2020/01/Google-Graveyard-760x380.jpg",
+          "publishedAt": "2024-04-01T17:37:24Z",
+          "author":"Martina López"
+          },
+    
+      {
+          "title": "Google agrees to destroy browsing data collected in Incognito mode",
+          "description": "The agreement is part of a proposed class action settlement filed with a California federal court in the case Brown v. Google.",
+          "content": "Google agreed to destroy or de-identify billions of records of web browsing data collected when users were in its private browsing “Incognito mode,” according to a proposed class action settlement filed Monday.\nThe proposed settlement in Brown v. Goo... [2034 chars]",
+          "url": "https://www.theverge.com/2024/4/1/24117929/google-incognito-browsing-data-delete-class-action-settlement",
+          "image": "https://cdn.vox-cdn.com/thumbor/zoPORZsYcJT2WjI5lx7z45IV7As=/0x0:2040x1360/1200x628/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/24016886/STK093_Google_03.jpg",
+          "publishedAt": "2024-04-01T17:33:35Z",
+          "author":"Pablo Castro"
+        
+      },
+      {
+          "title": "Google says it will destroy browsing data collected from Chrome’s Incognito mode",
+          "description": "The first details emerged Monday from Google’s settlement of a class-action lawsuit over Chrome’s tracking of Incognito users. Filed in 2020, the suit could have required the company to pay $5 billion in damages.",
+          "content": "The first details emerged Monday from Google’s settlement of a class-action lawsuit over Chrome’s tracking of Incognito users. Filed in 2020, the suit could have required the company to pay $5 billion in damages. Instead, The Wall Street Journal repo... [3357 chars]",
+          "url": "https://www.engadget.com/google-says-it-will-destroy-browsing-data-collected-from-chromes-incognito-mode-172121598.html",
+          "image": "https://s.yimg.com/ny/api/res/1.2/9kDdGBY2dFyLbMyJ0vQTmQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD03ODc-/https://s.yimg.com/os/creatr-uploaded-images/2024-03/781cf7e0-f048-11ee-9fef-5c6e8f1069a5",
+          "publishedAt": "2024-04-01T17:21:22Z",
+          "author":"Dario Cuevas"
+      }
+  ]
+  }
+  
