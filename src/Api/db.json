@@ -1,5 +1,6 @@
 {
-    "articles": [
+  "articles": [
+    
       {
         "id":"1",
         "title": "Google Podcasts shuts down tomorrow, April 2",
@@ -29,6 +30,37 @@
           "author":"Dario Cuevas",
           "category_id":""
       }
-  ]
-  }
+  ],
+
   
+
+  "News": [
+    {
+      "title": "Google Messages beta reveals how Android 15 could let you text anyone via satellite",
+      "description": "Strings in the latest version of the Google Messages app beta reveal how Android 15 will let users communicate with anyone through satellite messaging.",
+      "content": "What you need to know\nGoogle appears to be working on a satellite messaging feature in Google Messages for Android 15.\nA recent Google Messages beta gives us our best look at how satellite messaging in Google Messages will work.\nThe feature appears t... [2517 chars]",
+      "url": "https://www.androidcentral.com/apps-software/google-messages-beta-satellite-messaging-spotted",
+      "image": "https://cdn.mos.cms.futurecdn.net/2998w5QMnSoSCZQYRfwFXJ-1200-80.jpg",
+      "publishedAt": "2024-04-03T06:08:46Z"
+   
+  },
+  
+     { "title": "Your Google Pixel is getting the April 2024 update, here's what's new",
+      "description": "Google Pixel device owners running Android 14 can now download and apply the April 2024 security update, which includes patches and bug fixes.",
+      "content": "What you need to know\nGoogle rolled out its April 2024 security update starting on April 2, following the release of the Pixel Watch's April 2024 update.\nThe update includes 28 general security patches for Android and another 25 that are exclusively ... [2813 chars]",
+      "url": "https://www.androidcentral.com/apps-software/google-pixel-april-2024-update",
+      "image": "https://cdn.mos.cms.futurecdn.net/a2pWVLXWY8SiD3yAD4Gjq9-1200-80.jpg",
+      "publishedAt": "2024-04-03T04:47:59Z"
+      
+      },
+    
+  {
+      "title": "Google Home app could soon work offline and finally support your old Nest camera",
+      "description": "Offline Mode launch will first require deeper Matter support",
+      "content": "In a recent Reddit AMA, Google revealed it’s working on multiple projects for its smart home platform. Chief among these is the introduction of an offline mode. The way Google Home currently works, as explained by Android Authority, is commands sent ... [3036 chars]",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/h5tu6kCe5Z5kXgYqBCQPsT-1200-80.jpg",
+      "publishedAt": "2024-04-03T04:00:20Z"
+    
+  }
+]
+}
