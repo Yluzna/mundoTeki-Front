@@ -2,12 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    @font-face {
-        font-family: "Signika Negative", sans-serif;
-        font-optical-sizing: auto;
-        font-weight: <weight>;
-        font-style: normal;
-      src: url(/fonts/Roboto.woff2) format('woff2');
-    }
-  }
