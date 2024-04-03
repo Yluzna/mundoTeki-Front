@@ -32,10 +32,10 @@ function Navbar() {
  }, []);
 
  return (
-    <nav className="flex items-center justify-between px-9 py-8 bg-amber-200 text-black text-center">
+    <nav className="flex items-center justify-between px-9 py-8 text-black text-center">
       <div className="lg:hidden">
-        <button onClick={toggleMenu} className="focus:outline-none">
-          {menuState.open ? <FiX size={40} /> : <FiMenu size={30} />}
+        <button onClick={toggleMenu} className="focus:outline-none  hover:text-amber-600">
+          {menuState.open ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
       </div>
 
@@ -43,8 +43,8 @@ function Navbar() {
         <img src="/MT.png" alt="Logo" className="h-14 mx-auto" /> 
       </div>
 
-      <div className="flex items-center">
-        <FaUser size={24} />
+      <div className="flex items-center  hover:text-amber-600">
+        <FaUser size={28} />
       </div>
 
       {menuState.open && (
