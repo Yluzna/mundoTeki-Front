@@ -32,9 +32,9 @@ function Navbar() {
  }, []);
 
  return (
-    <nav className="flex items-center justify-between px-9 py-8 text-black text-center">
+    <nav className="flex items-center justify-between px-9 py-8 text-black text-center border-2">
       <div className="lg:hidden">
-        <button onClick={toggleMenu} className="focus:outline-none  hover:text-amber-600">
+        <button onClick={toggleMenu} className="focus:outline-none hover:text-amber-600">
           {menuState.open ? <FiX size={28} /> : <FiMenu size={28} />}
         </button>
       </div>
@@ -43,7 +43,7 @@ function Navbar() {
         <img src="/MT.png" alt="Logo" className="h-14 mx-auto" /> 
       </div>
 
-      <div className="flex items-center  hover:text-amber-600">
+      <div className="flex items-center hover:text-amber-600">
         <FaUser size={28} />
       </div>
 
@@ -60,13 +60,13 @@ function Navbar() {
                 <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</a>
               </>
             )}
-            {menuState.type === 'large' && (
+           {/*  {menuState.type === 'large' && (
               <>
                 <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Destacados</a>
                 <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Análisis</a>
                 <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</a>
               </>
-            )}
+            )} */}
           </div>
           <div className="fixed inset-0 bg-black opacity-25 z-40" onClick={closeModal}></div>
         </div>

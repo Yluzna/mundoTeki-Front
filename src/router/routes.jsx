@@ -1,7 +1,9 @@
-/* import { createBrowserRouter } from "react-router-dom";
-import Home from "../pages/Home/Home";
-import AdminDashboard from "../pages/AdminDashboard/AdminDashboard"; 
-import App from "../pages/App";
+import { createBrowserRouter } from "react-router-dom";
+import home from "../page/Home"
+import AdminDashboard from "../page/Admindashboard"
+import Detailnotice from "../page/Detailnotice"; 
+import Company from 
+import App from "../App"
 
 
 export const router = createBrowserRouter([
@@ -25,10 +27,10 @@ export const router = createBrowserRouter([
         path: "/detailnotice",
         element: <Detail />,
       },
-        {
+        /* {
           path: "/newnotice",
           element: <AddNewNotice />,
-      },
+      }, */
     
     {
         path: "/company",
@@ -40,20 +42,23 @@ export const router = createBrowserRouter([
       },
       ,
       {
-        path: "/science&tecnology",
-        element: <Science />,
+        path: "/culture&segurity",
+        element: <culture />,
       },
       ,
       {
-        path: "/science&tecnology",
-        element: <Science />,
+        path: "/developmen&programing",
+        element: <developmen />,
       },
-      ,
       {
-        path: "/science&tecnology",
-        element: <Science />,
+        path: "/gaming",
+        element: <gaming />,
+      }, 
+      {
+        path: "/latestnews",
+        element: <latestnews />,
       },
     ],
   },
 ]);
- */
+ 
