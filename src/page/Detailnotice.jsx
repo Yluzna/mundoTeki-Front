@@ -20,7 +20,7 @@ const Detailnotice = () => {
 
   return (
     <section>
-      <div className="grid grid-cols-1 gap-12 lg:gap-24 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-12 lg:gap-1 mt-6 lg:grid-cols-1">
         {data.map((item) => (
           <Card
             key={item.id}
