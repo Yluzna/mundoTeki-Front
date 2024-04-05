@@ -1,14 +1,14 @@
 import React from 'react';
 import Detailnotice from './page/Detailnotice';
-import Footer from './components/Footer/Footer';
 import Home from './page/Home';
-
+import Adv from './components/Advertisement/Adv'
 function App() {
   return (
     <div>
-      <div className='sm:flex sm:gap-10'>
+      <div className='sm:flex sm:gap-4'>
       <Home/>
       <Detailnotice />
+      <Adv imageUrl=".\src\images\Anuncios-iphone.jpg" altText="Publicidad"/>
       </div>
     </div>
   );
