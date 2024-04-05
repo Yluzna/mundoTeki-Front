@@ -1,15 +1,13 @@
-import React from 'react';
-import Detailnotice from './page/Detailnotice';
-import Home from './page/Home';
-import Adv from './components/Advertisement/Adv'
+import './App.css'
+import NavBar from './components/Navbar/Nav'
+import Categories from './components/Categories/Categories'
+import Footer from './components/Footer/Footer'
+
 function App() {
   return (
     <div>
-      <div className='sm:flex sm:gap-4'>
-      <Home/>
       <Detailnotice />
-      <Adv imageUrl=".\src\images\Anuncios-iphone.jpg" altText="Publicidad"/>
-      </div>
+      <Footer />
     </div>
   );
 }
