@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { FaUser } from "react-icons/fa"; 
+import { Link } from "react-router-dom";
 
 function Navbar() {
  const [menuState, setMenuState] = useState({
@@ -48,29 +49,23 @@ function Navbar() {
       </div>
 
       {menuState.open && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="p-6 z-50">
-            {menuState.type === 'small' && (
-              <>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Empresas y Startups</a>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Ciencia y tecnología</a>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Cultura y Seguridad digital</a>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Desarrollo y programación</a>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Gaming</a>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</a>
-              </>
-            )}
-           {/*  {menuState.type === 'large' && (
-              <>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Destacados</a>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Análisis</a>
-                <a href="#" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</a>
-              </>
-            )} */}
-          </div>
-          <div className="fixed inset-0 bg-black opacity-25 z-40" onClick={closeModal}></div>
-        </div>
+ <div className="fixed inset-0 flex items-center justify-center z-50">
+    <div className="p-6 z-50">
+      {menuState.type === 'small' && (
+        <>
+          <Link to="/company" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Empresas y Startups</Link>
+          <Link to="/science&tecnology" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Ciencia y tecnología</Link>
+          <Link to="/culture&segurity" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Cultura y Seguridad digital</Link>
+          <Link to="/developmen&programing" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Desarrollo y programación</Link>
+          <Link to="/gaming" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Gaming</Link>
+          <Link to="/latestnews" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</Link>
+        </>
       )}
+    </div>
+    <div className="fixed inset-0 bg-black opacity-25 z-40" onClick={closeModal}></div>
+ </div>
+)}
+
     </nav>
  );
 }
