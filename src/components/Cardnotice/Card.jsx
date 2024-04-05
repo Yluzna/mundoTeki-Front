@@ -5,7 +5,7 @@ const Card = ({ created_at, title, image_url, content, author }) => {
   return (
     <section className='px-3 '>
       
-    <div className="w-full sm:max-w-ls mx-auto my-4 mb-1 bg-white shadow-xl rounded-xl flex ">
+    <div className="w-[340px] sm:max-w-ls mx-auto my-3 mb-1 bg-white shadow-xl rounded-xl flex ">
       <div className="flex-shrink-0">
         <img className="w-24 h-24 sm:w-32 sm:h-32 rounded-md object-cover" src={image_url} alt="text" />
       </div>
