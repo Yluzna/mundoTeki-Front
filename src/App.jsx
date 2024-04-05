@@ -4,8 +4,6 @@ import Categories from './components/Categories/Categories'
 import Footer from './components/Footer/Footer'
 
 function App() {
-
-
   return (
     <>
     <NavBar/>
@@ -15,4 +13,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
