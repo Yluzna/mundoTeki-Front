@@ -29,7 +29,8 @@ export const getPostsByCategory = async (category) => {
     try {
         const response = await fetch(API_URL);
         const posts = await response.json();
-        const post = posts.find(post => post.category == category);
+        const post = posts.filter(post => post.category == category);
+       
         return post;
 
     } catch (error) {

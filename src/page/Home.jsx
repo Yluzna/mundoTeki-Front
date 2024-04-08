@@ -8,7 +8,7 @@ import { getPostsByCategory } from '../services/postService';
 import Notice from '../components/NoticeCategory/Notice';
 
 const Home = () => {
-  console.log("hello from home")
+  //console.log("hello from home")
   const [relevantPostData, setRelevantPostData] = useState([]);
   const [postsData, setPostsData] = useState([]);
   const [postsCategoryData, setPostsCategoryData] = useState([]);
@@ -23,15 +23,21 @@ const Home = () => {
     setPostsData(posts);
   }
 
-  const fetchPostsByCategory = async () => {
-    const post = await getPostsByCategory();
-    setPostsCategoryData(post);
+  const fetchPostsByCategory = async (category) => {
+
+    const postCategory = await getPostsByCategory(category);
+    setPostsCategoryData(postCategory);
+  
   }
 
   useEffect(() => {
     fetchRelevantPost();
     fetchAllPosts()
-    fetchPostsByCategory()
+    const categories = ['gaming', 'company']; // Lista de categorías
+
+    categories.forEach(category => {
+        fetchPostsByCategory(category);
+    });
 
   }, []);
 
@@ -59,12 +65,12 @@ const Home = () => {
             <h3 className="font-bold text-pink-500 ml-3 text-[20px] " >Últimas Noticias</h3>
             {postsData && postsData.map((posts) => (
               <Card
-                key={postsData.id}
-                created_at={postsData.created_at}
-                title={postsData.title}
-                image_url={postsData.image_url}
-                author={postsData.author}
-                category={postsData.category}
+                key={posts.id}
+                created_at={posts.created_at}
+                title={posts.title}
+                image_url={posts.image_url}
+                author={posts.author}
+                category={posts.category}
               />
             ))}
           </div>
@@ -74,22 +80,57 @@ const Home = () => {
           <Adv />
         </section>
       </div>
+      <section>
 <div>
-
+  
+{ postsCategoryData && postsCategoryData.map((post) =>(
+ 
   <Notice 
-  key={postsCategoryData.id}
-  created_at={postsCategoryData.created_at}
-  title={postsCategoryData.title}
-  image_url={postsCategoryData.image_url}
-  content={postsCategoryData.content}
-  author={postsCategoryData.author}
-  category={postsCategoryData.category}/>
+   
+  key={post.id}
+  created_at={post.created_at}
+  title={post.title}
+  image_url={post.image_url}
+  content={post.content}
+  author={post.author}
+  category={post.category}/>
+
+
+ ))},
+
+
+
 </div>
+</section>
+
+<section>
+<div>
+  
+{ postsCategoryData && postsCategoryData.map((post) =>(
+ 
+ <Notice 
+  
+ key={post.id}
+ created_at={post.created_at}
+ title={post.title}
+ image_url={post.image_url}
+ content={post.content}
+ author={post.author}
+ category={post.category}/>
+
+
+))},
+
+</div>
+ 
+</section>
       
     
       </div>
+      
   );
 
 };
+
 
 export default Home;
