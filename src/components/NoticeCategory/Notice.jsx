@@ -4,7 +4,7 @@ return(
 <section>
   <div class="relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8 ">
     <div class="relative mx-auto max-w-7xl ">
-      <div class="grid max-w-lg gap-5 mx-auto lg:grid-cols-1 lg:max-w-none ">
+      <div class="grid max-w-lg gap-5 mx-auto lg:grid-cols-3 lg:max-w-none ">
         <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
           <div class="flex-shrink-0">
             <img class="object-cover w-full h-48" src={image_url} alt="img"/>

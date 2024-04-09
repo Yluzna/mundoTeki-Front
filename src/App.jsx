@@ -1,20 +1,20 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './page/Home';
-import AdminDashboard from './page/Admindashboard';
+import './App.css'
+import NavBar from './components/Navbar/Nav'
+import Categories from './components/Categories/Categories'
+import Footer from './components/Footer/Footer'
+import Cardnotice from './components/Cardnotice/Card'
+import { Outlet } from 'react-router'
 
 
 function App() {
   return (
-     <Router>
-       <Routes>
-         <Route path="/" element={<MainLayout />}>
-           <Route index element={<Home />} />
-           <Route path="admin" element={<AdminDashboard />} />
-         </Route>
-       </Routes>
-     </Router>
-  );
- }
- 
+    <>
+    <NavBar/>
+    <Categories />
+    <Outlet />
+    <Footer />
+    </>
+  )
+}
+
 export default App;

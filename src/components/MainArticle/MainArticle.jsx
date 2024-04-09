@@ -4,7 +4,7 @@ const MainArticle = ({ created_at, title, image_url, content, author }) => {
       <section>
       <picture>
         <source media="(max-width:640px) (min-width: 641)" />
-          <img src={image_url} alt="articulo principal" className="sm:ml-3"/>
+          <img src={image_url} alt="articulo principal" className="sm:ml-3 mb-1"/>
           </picture>
         <div className="px-3">
           <div className="flex">
