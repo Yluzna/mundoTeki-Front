@@ -1,36 +1,30 @@
-const Notice = ({image_url,title,content,created_at,author}) => {
+const Notice = ({ image_url, title, content, created_at, author, category }) => {
 
-return(
-<section>
-  <div class="relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8 ">
-    <div class="relative mx-auto max-w-7xl ">
-      <div class="grid max-w-lg gap-5 mx-auto lg:grid-cols-3 lg:max-w-none ">
-        <div class="flex flex-col overflow-hidden rounded-lg shadow-lg">
-          <div class="flex-shrink-0">
-            <img class="object-cover w-full h-48" src={image_url} alt="img"/>
-          </div>
-          <div class="flex flex-col justify-between flex-1 p-6 bg-white">
-            <div class="flex-1">
-              <a href="#" class="block mt-2">
-                <p class="text-xl font-semibold text-neutral-600">{title}</p>
-                <p class="mt-3 text-base text-gray-500">{content}</p>
-              </a>
-            </div>
-            <div class="flex items-center mt-6">
-              <div class="flex-shrink-0">
-                
-                  <span class="sr-only">{created_at}</span>
-                  <span class="sr-only">{author}</span>
-                
-              </div>
-             </div>
-          </div>
+  return (
+
+    <article className="flex w-[370px] lg:w-[400px] mt-4 ml-2 bg-[#F8F4E3]">
+
+      <div className="flex">
+        <img alt="notice" src={image_url} className="w-80 h-32 rounded-md object-cover"/>
+      </div>
+      <div class="pl-4">
+      <div class="flex justify-between text-gray-500 mb-3  text-[11px] ">
+          <span> {author}</span>
+          <span className="mr-3">{created_at}</span>
+        </div>
+      
+        <h2 class=" mb-[14px] text-gray-900 font-bold hover:text-[#C27A00] cursor-pointer ">{title}</h2>
+        <div className="flex justify-end text-[11px]">
+        <span span className="mr-3" style={{ marginTop: '-10px' }}>{category}</span>
         </div>
         
-          </div>
-          </div>
-  </div>
-</section>
-);
+
+
+      </div>
+
+
+
+    </article>
+  );
 }
 export default Notice;

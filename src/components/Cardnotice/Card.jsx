@@ -3,9 +3,9 @@ import React from 'react';
 const Card = ({ created_at, title, image_url, content, author }) => {
   
   return (
-    <section className='px-3 '>
+    <section>
       
-    <div className="w-[300px] sm:max-w-ls mx-auto my-3 mb-1 bg-white shadow-xl rounded-xl flex ">
+    <div className="w-[370px] sm:w-[300px] sm:max-w-ls mx-auto my-2 mb-1 bg-white shadow-xl rounded-xl flex ml-2 ">
       <div className="flex-shrink-0">
         <img className="w-24 h-24 sm:w-32 sm:h-32 rounded-md object-cover" src={image_url} alt="text" />
       </div>
