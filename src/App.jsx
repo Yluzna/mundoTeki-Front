@@ -6,6 +6,7 @@ import Cardnotice from './components/Cardnotice/Card'
 import { Outlet } from 'react-router'
 
 
+
 function App() {
   return (
     <>

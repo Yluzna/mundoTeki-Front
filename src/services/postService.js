@@ -1,6 +1,5 @@
-// get all posts
 
-const API_URL = "http://localhost:3001/posts";
+const API_URL = import.meta.env.VITE_URL;
 
 export const getAllPosts = async () => {
     try {

@@ -10,24 +10,7 @@ import Notice from '../components/NoticeCategory/Notice';
 import '../index.css';
 
 const Home = () => {
-  const getCategoryTextColorClass = (category) => {
-    switch (category) {
-      case 'gaming':
-        return 'text-red-500'; // Color de texto rojo
-      case 'company':
-        return 'text-green-500'; // Color de texto verde
-      case 'science':
-        return 'text-blue-500'; // Color de texto azul
-      case 'development':
-        return 'text-yellow-500'; // Color de texto amarillo
-      case 'culture':
-        return 'text-purple-500'; // Color de texto morado
-      case 'last':
-        return 'text-cyan-500'; // Color de texto cian
-      default:
-        return 'text-gray-500'; // Color de texto gris para cualquier otra categoría
-    }
-  };
+  
   
   //console.log("hello from home")
   const [relevantPostData, setRelevantPostData] = useState([]);
@@ -83,7 +66,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className='md:flex md:gap-4 '>
+      <div className='lg:flex lg:gap-4 '>
         <section style={{ flexBasis: '55%' }}>
           <div className="grid grid-cols-1 gap 12 lg:gap-1 lg:grid-cols-1">
 
