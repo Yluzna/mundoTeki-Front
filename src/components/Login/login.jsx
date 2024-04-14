@@ -15,7 +15,7 @@ const LoginPage = () => {
     }
 
     try {
-      // Simulate API call (replace with actual API fetch)
+      // Simulacion de llamada a la api usar la real
       const response = await fetch('/api/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

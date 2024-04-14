@@ -4,6 +4,7 @@ import Categories from './components/Categories/Categories'
 import Footer from './components/Footer/Footer'
 import Cardnotice from './components/Cardnotice/Card'
 import { Outlet } from 'react-router'
+import login from './components/Login/login'
 
 
 function App() {
