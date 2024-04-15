@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../page/Home";
-import AdminDashboard from "../page/AdminDashboard";
+import AdminDashboard from "../page/Admindashboard";
 //import Detailnotice from "../page/Detailnotice";
 import App from "../App"
 
@@ -22,41 +22,41 @@ export const router = createBrowserRouter([
         path: "/admin",
         element: <AdminDashboard />,
       },
-      /* {
-        path: "/detailnotice",
-        element: <Detail />,
-      }, */
-      /* {
-        path: "/newnotice",
-        element: <AddNewNotice />,
-    }, */
-
-      /*     {
-              path: "/company",
-              element: <Company />
-          }, */
-      /*  {
-         path: "/science&tecnology",
-         element: <Science />,
-       },
-       ,
-       {
-         path: "/culture&segurity",
-         element: <culture />,
-       },
-       ,
-       {
-         path: "/developmen&programing",
-         element: <developmen />,
-       },
-       {
-         path: "/gaming",
-         element: <gaming />,
-       }, 
-       {
-         path: "/latestnews",
-         element: <latestnews />,
-       }, */
-    ],
-  },
-]);
+        /* {
+          path: "/detailnotice",
+          element: <Detail />,
+        }, */
+        /* {
+          path: "/newnotice",
+          element: <AddNewNotice />,
+        }, */
+        
+        /*     {
+          path: "/company",
+          element: <Company />
+        }, */
+        /*  {
+          path: "/science&tecnology",
+          element: <Science />,
+        },
+        ,
+        {
+          path: "/culture&segurity",
+          element: <culture />,
+        },
+        ,
+        {
+          path: "/developmen&programing",
+          element: <developmen />,
+        },
+        {
+          path: "/gaming",
+          element: <gaming />,
+        }, 
+        {
+          path: "/latestnews",
+          element: <latestnews />,
+        }, */
+      ],
+    },
+  ]);
