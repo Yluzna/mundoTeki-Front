@@ -2,9 +2,9 @@
 
 const Adv = ({ }) => {
   return (
-    <div className="border border-gray-300 p-1  hidden sm:block mt-5  ">
-    <img src=".\src\images\Anuncios-iphone.jpg" alt="Publicidad" className="max-w-40 max-h-full" />
-    </div>
+    <section className="ml-4 mt-6 hidden md:block">
+    <div class="w-20 h-96 bg-[#e2e8f0]"></div>
+    </section>
   );
 };
 

@@ -9,7 +9,7 @@ const MainArticle = ({ created_at, title, image_url, content, author }) => {
         <div className="px-3">
           <div className="flex">
           <span className="text-sm text-gray-500">{created_at}</span>
-          <span className="text-sm text-gray-500">{author}</span>
+          <span className="text-s text-gray-500">{author}</span>
           </div>
           < div className="py-2"> 
           <h6 className="mt-1 text-[25px] font-bold leading-6 text-gray-800 hover:text-gray-500 sm:text-[30px] ">{title}</h6>
