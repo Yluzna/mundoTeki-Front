@@ -11,19 +11,11 @@
     "start": "json-server src/Api/db.json --port 3001"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "prop-types": "^15.8.1",
-=======
     "dotenv": "^16.4.5",
->>>>>>> a9c7443bb4024a446181ecf7a7191e2f6370bfde
     "react": "^18.2.0",
     "react-avatar": "^5.0.3",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
-<<<<<<< HEAD
-=======
-    "react-router": "^6.22.3",
->>>>>>> a9c7443bb4024a446181ecf7a7191e2f6370bfde
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {
