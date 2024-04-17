@@ -10,7 +10,7 @@ export const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-  /*     {
+      /*     {
         path: "/",
         element: "/login",
       }, */
@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
         path: "/admin",
         element: <AdminDashboard />,
       },
-        /* {
+      /* {
           path: "/detailnotice",
           element: <Detail />,
         }, */
