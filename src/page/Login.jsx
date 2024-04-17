@@ -1,5 +1,6 @@
 import LoginRegister from "../components/LoginRegister/LoginRegister";
 
+
 const Login = () => {
 
   return (
@@ -11,3 +12,4 @@ const Login = () => {
 }
 
 export default Login;
+

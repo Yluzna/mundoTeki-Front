@@ -4,6 +4,7 @@ import Categories from './components/Categories/Categories'
 import Footer from './components/Footer/Footer'
 import { Outlet } from 'react-router'
 
+
 function App() {
   return (
     <>
