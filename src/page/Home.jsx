@@ -15,12 +15,8 @@ const Home = () => {
 
   //console.log("hello from home")
   const [relevantPostData, setRelevantPostData] = useState([]);
+  const [postsData, setPostsData] = useState([]);
   const [postsCategoryData, setPostsCategoryData] = useState([]);
-  const [gamingPostsData, setGamingPostsData] = useState([]);
-  const [companyPostsData, setCompanyPostsData] = useState([]);
-  const [sciencePostsData, setSciencePostsData] = useState([]);
-  const [developmentPostsData, setDevelopmentPostsData] = useState([]);
-  const [culturePostData, setCulturePostData] = useState([]);
   const [lastPostData, setLastPostData] = useState([]);
   const[relevantPostCategoryData, setRevelantPostCategoryData] = useState([])
   const [relevantGamingPostCategoryData, setRelevantGamingPostCategoryData] = useState([]);
@@ -60,22 +56,6 @@ const Home = () => {
   }
   //por categoria
   const fetchPostsByCategory = async (category) => {
-
-    const postCategory = await getPostsByCategory(category);
-    setPostsCategoryData(postCategory);
-    const gamingPosts = await getPostsByCategory('gaming');
-    setGamingPostsData(gamingPosts);
-
-    const culturePosts = await getPostsByCategory('culture');
-    setCulturePostData(culturePosts);
-
-
-    const companyPosts = await getPostsByCategory('company');
-    setCompanyPostsData(companyPosts);
-    const sciencePosts = await getPostsByCategory('science');
-    setSciencePostsData(sciencePosts);
-    const developmentPosts = await getPostsByCategory('development');
-    setDevelopmentPostsData(developmentPosts);
 
     const lastPosts = await getPostsByCategory('last');
     setLastPostData(lastPosts);
