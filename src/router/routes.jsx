@@ -1,5 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import Home from "../page/Home"
+import Home from "../page/Home";
+// import AdminDashboard from "../page/Admindashboard"
+//import Detailnotice from "../page/Detailnotice"; 
+// import Company
 import App from "../App"
 
 
@@ -8,16 +11,15 @@ export const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [
-     /*  {
+      /*     {
         path: "/",
         element: "/login",
       }, */
       {
         path: "/home",
         element: <Home />,
-      }
-      /* ,
-        {
+      },
+        /* {
           path: "/admin",
           element: <AdminDashboard />,
         }, */
@@ -59,3 +61,4 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
+ 
