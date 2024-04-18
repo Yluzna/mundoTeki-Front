@@ -5,10 +5,8 @@ const LayoutCategory = ({ created_at, title, image_url, content, author }) => {
       <div className="">
         <div className="w-80">
           {/* <img className="object-cover w-full max-w-sm mx-auto ml-[-1px]" src={image_url}></img> */}
-          <p className="mb-1 text-xs font-semibold tracking-wide text-gray-600 uppercase">
-            {created_at}
-          </p>
-          <div className="mb-1">
+          
+          <div className="">
             <a
               href="/"
               aria-label="Article"
@@ -22,10 +20,13 @@ const LayoutCategory = ({ created_at, title, image_url, content, author }) => {
           <p className="mb-4 text-sm text-gray-700 md:text-m">
             {content}
           </p>
-          <div className="flex items-center">
+          <div className="flex justify-between">
             <p className="text-xs font-medium leading-4 text-gray-600">
               {author}
             </p>
+            <p className="mb-1 text-xs font-semibold tracking-wide text-gray-600 uppercase">
+            {created_at}
+          </p>
           </div>
         </div>
         {/* <div className="flex flex-col space-y-8 lg:col-span-3 col-span-1">
