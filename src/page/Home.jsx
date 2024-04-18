@@ -103,7 +103,7 @@ const Home = () => {
   let image = [];
 
   relevantGamingPostCategoryData.map(post => (
-    image = post.image_url
+    image= post.image_url
 
   )
   )
@@ -184,10 +184,10 @@ const Home = () => {
 
       <section className=''>
         <div>
-          <h3 className="font-bold bg-[#E5446D] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Gaming</h3>
+          <h3 className="font-bold bg-[#C27A00] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Gaming</h3>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 ">
-          <img className="object-cover max-w-sm mx-auto ml-[45px] lg:w-[400px]" src={image}>
+        <div className="grid lg:grid-cols-2 lg:grid-rows-2 ">
+          <img className="object-cover sm:max-w-sm  mx-auto lg:ml-[45px]  sm:ml-[20px] lg:w-[400px]" src={image}>
           </img>
 
           {relevantGamingPostCategoryData.map(post => (
@@ -205,11 +205,11 @@ const Home = () => {
 
 
         <div>
-          <h3 className="font-bold bg-[#E5446D] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Culture</h3>
+          <h3 className="font-bold bg-[#2A2B2A] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Culture</h3>
         </div>
 
         <div className="grid grid-cols-2 grid-rows-2 ">
-          <img className="object-cover max-w-sm mx-auto ml-[45px] lg:w-[400px]" src={image}>
+          <img className="object-cover sm:max-w-sm  mx-auto lg:ml-[45px]  sm:ml-[20px] lg:w-[400px]" src={image}>
           </img>
 
           {relevantCulturePostCategoryData.map(post => (
@@ -226,11 +226,11 @@ const Home = () => {
         </div>
 
         <div>
-          <h3 className="font-bold bg-[#E5446D] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Company</h3>
+          <h3 className="font-bold bg-[#7BB2D9] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Company</h3>
         </div>
         <div className="grid grid-cols-2 grid-rows-2 ">
 
-          <img className="object-cover max-w-sm mx-auto ml-[45px] lg:w-[400px]" src={image}>
+          <img className="object-cover sm:max-w-sm  mx-auto lg:ml-[45px]  sm:ml-[20px] lg:w-[400px]" src={image}>
           </img>
 
           {relevantCompanyPostCategoryData.map(post => (
@@ -250,7 +250,7 @@ const Home = () => {
           <h3 className="font-bold bg-[#E5446D] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Development</h3>
         </div>
         <div className="grid grid-cols-2 grid-rows-2 ">
-          <img className="object-cover max-w-sm mx-auto ml-[45px] lg:w-[400px]" src={image}>
+          <img className="object-cover sm:max-w-sm  mx-auto lg:ml-[45px]  sm:ml-[20px] lg:w-[400px]" src={image}>
           </img>
 
           {relevantDevelopmentPostCategoryData.map(post => (
@@ -272,7 +272,7 @@ const Home = () => {
         </div>
 
         <div className="grid grid-cols-2 grid-rows-2 ">
-          <img className="object-cover max-w-sm mx-auto ml-[45px] lg:w-[400px]" src={image}>
+          <img className="object-cover sm:max-w-sm  mx-auto lg:ml-[45px]  sm:ml-[20px] lg:w-[400px]" src={image}>
           </img>
 
           {relevantSciencePostCategoryData.map(post => (

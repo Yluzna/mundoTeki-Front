@@ -3,7 +3,7 @@ const LayoutCategory = ({ created_at, title, image_url, content, author }) => {
   return (
     <div>
       <div className="">
-        <div className="w-80">
+        <div className="lg:w-80 sm:w-40">
           {/* <img className="object-cover w-full max-w-sm mx-auto ml-[-1px]" src={image_url}></img> */}
           <p className="mb-1 text-xs font-semibold tracking-wide text-gray-600 uppercase">
             {created_at}
