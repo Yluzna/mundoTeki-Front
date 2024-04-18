@@ -36,6 +36,18 @@ export const getPostsByCategory = async (category) => {
         console.error('Error fetching data: ', error);
     }
 }
+export const getPrincipalPostCategory = async (category) => {
+    try {
+        const response = await fetch(API_URL);
+        const posts = await response.json();
+        const principalPostCategory = posts.find(post => post.category === category);
+       
+        return principalPostCategory;
+
+    } catch (error) {
+        console.error('Error fetching data: ', error);
+    }
+}
 export const getRelevantPostCategory = async (category) =>{
     try {
         const response = await fetch(API_URL);

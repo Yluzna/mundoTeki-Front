@@ -4,6 +4,7 @@ import Home from "../page/Home";
 //import Detailnotice from "../page/Detailnotice"; 
 // import Company
 import App from "../App"
+import Gaming from "../page/Gaming";
 
 
 export const router = createBrowserRouter([
@@ -49,12 +50,12 @@ export const router = createBrowserRouter([
       {
         path: "/developmen&programing",
         element: <developmen />,
-      },
+      },*/
       {
         path: "/gaming",
-        element: <gaming />,
+        element: <Gaming />,
       }, 
-      {
+      /*{
         path: "/latestnews",
         element: <latestnews />,
       }, */
