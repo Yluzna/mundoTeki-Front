@@ -15,12 +15,8 @@ const Home = () => {
 
   //console.log("hello from home")
   const [relevantPostData, setRelevantPostData] = useState([]);
+  const [postsData, setPostsData] = useState([]);
   const [postsCategoryData, setPostsCategoryData] = useState([]);
-  const [gamingPostsData, setGamingPostsData] = useState([]);
-  const [companyPostsData, setCompanyPostsData] = useState([]);
-  const [sciencePostsData, setSciencePostsData] = useState([]);
-  const [developmentPostsData, setDevelopmentPostsData] = useState([]);
-  const [culturePostData, setCulturePostData] = useState([]);
   const [lastPostData, setLastPostData] = useState([]);
   const[relevantPostCategoryData, setRevelantPostCategoryData] = useState([])
   const [relevantGamingPostCategoryData, setRelevantGamingPostCategoryData] = useState([]);
@@ -60,22 +56,6 @@ const Home = () => {
   }
   //por categoria
   const fetchPostsByCategory = async (category) => {
-
-    const postCategory = await getPostsByCategory(category);
-    setPostsCategoryData(postCategory);
-    const gamingPosts = await getPostsByCategory('gaming');
-    setGamingPostsData(gamingPosts);
-
-    const culturePosts = await getPostsByCategory('culture');
-    setCulturePostData(culturePosts);
-
-
-    const companyPosts = await getPostsByCategory('company');
-    setCompanyPostsData(companyPosts);
-    const sciencePosts = await getPostsByCategory('science');
-    setSciencePostsData(sciencePosts);
-    const developmentPosts = await getPostsByCategory('development');
-    setDevelopmentPostsData(developmentPosts);
 
     const lastPosts = await getPostsByCategory('last');
     setLastPostData(lastPosts);
@@ -184,7 +164,7 @@ const Home = () => {
 
       <section className=''>
         <div>
-          <h3 className="font-bold bg-[#E5446D] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Gaming</h3>
+          <h3 className="font-bold bg-[#C27A00] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Gaming</h3>
         </div>
         <div className="grid grid-cols-2 grid-rows-2 ">
           <img className="object-cover max-w-sm mx-auto ml-[45px] lg:w-[400px]" src={image}>
@@ -205,7 +185,7 @@ const Home = () => {
 
 
         <div>
-          <h3 className="font-bold bg-[#E5446D] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Culture</h3>
+          <h3 className="font-bold bg-[#2A2B2A] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Culture</h3>
         </div>
 
         <div className="grid grid-cols-2 grid-rows-2 ">
@@ -226,7 +206,7 @@ const Home = () => {
         </div>
 
         <div>
-          <h3 className="font-bold bg-[#E5446D] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Company</h3>
+          <h3 className="font-bold bg-[#7BB2D9] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2" >Company</h3>
         </div>
         <div className="grid grid-cols-2 grid-rows-2 ">
 
