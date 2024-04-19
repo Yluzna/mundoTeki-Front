@@ -39,6 +39,7 @@ useEffect(() => {
  
 
   const categories = ['gaming', 'company', 'science', 'development', 'culture', 'last'];
+  fetchRelevantPostCategory();
   categories.forEach(category => {
     fetchPostsByCategory(category);
   });
@@ -67,6 +68,30 @@ useEffect(() => {
             </div>
 </div>
 
+
+<div className="px-2 py-2">
+    <h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-[#C27A00] mt-[-20px] py-1 px-4 rounded-xs w-[-100px]">Ultimas Noticias</h3>
+    <div className="bg-[#C27A00] h-[2px] w-full mt-[-10px]"></div>
+
+  
+    <div className="lg:flex lg:gap-4 relative"> {/* Agregar clase relative al contenedor principal */}
+    <div className="lg:flex-1 mr-0 lg:mr- mb-8"> {/* Ajustar el tamaño del contenedor principal */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4"> {/* Ajustar la cuadrícula */}
+      {relevantGamingPostCategoryData.map(post => (
+        <MainArticle
+     
+              key={principalPostCategory.id}
+              //created_at={principalPostCategory.created_at}
+              title={principalPostCategory.title}
+              image_url={principalPostCategory.image_url}
+              author={principalPostCategory.author}
+              category={principalPostCategory.category}
+              />
+            ))}       
+            </div>
+            </div>
+            </div>
+            </div>
 
 
 <section>
