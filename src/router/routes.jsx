@@ -3,8 +3,6 @@ import Home from "../page/Home";
 //import Detailnotice from "../page/Detailnotice"; 
 // import Company
 import App from "../App"
-import LayoutAdmin from "../LayoutAdmin/LayoutAdmin";
-import HomeAdmin from "../page/Admin/HomeAdmin";
 
 
 export const router = createBrowserRouter([
