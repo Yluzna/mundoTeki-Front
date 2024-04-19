@@ -60,6 +60,8 @@ useEffect(() => {
               </div>
             </div>
             
+
+            
             <div className="hidden lg:block absolute top-0 right-0 w-24"> {/* Ajustar el tamaño y la posición del anuncio */}
       <Adv />
       <Adv />
@@ -68,9 +70,13 @@ useEffect(() => {
     
   </div>
 </div>
+
+
+
 <section>
+  
     <h3 className="font-bold text-[#E5446D] text-[20px]" ></h3>
-    
+    <div className="grid lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full lg: mt-">
             {gamingPostsData && gamingPostsData.map((posts) => (
               <CardNotice
                 key={posts.id}
@@ -82,7 +88,10 @@ useEffect(() => {
                 description={posts.description}
               />
             ))}
+
+</div>
             </section>
+            
 </div>
 
 
