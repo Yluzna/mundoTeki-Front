@@ -1,10 +1,7 @@
 const CardNotice = ({ image_url, title, content, created_at, author, category,description }) => {
 
-
-
-
   return (
-    <div className="px-1 py-1 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-1 py-1 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-4 ml-4">
       <div >
         <div className="mr-[-5px] transition-shadow duration-300 bg-white rounded shadow-sm px-4 mr-4">
           <img

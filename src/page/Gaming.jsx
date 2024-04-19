@@ -1,22 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import MainArticle from "../components/MainArticle/MainArticle";
 import CardNotice from "../components/NoticeCategory/CardNotice";
-import Card from "../components/Cardnotice/Card";
 import {getPrincipalPostCategory} from "../services/postService";
 import {getPostsByCategory} from "../services/postService";
-import Adv from '../components/Advertisement/Adv';
-import Adv2 from '../components/Advertisement/Adv2';
+import {getRelevantPostCategory} from "../services/postService";
 import Adv3 from '../components/Advertisement/Adv3';
 import '../index.css';
+
 const Gaming = () => {
   const [principalPostCategory, setPrincipalPostCategory] = useState([]);
-const [postsCategoryData, setPostsCategoryData] = useState([]);
 const [lastPostData, setLastPostData] = useState([]);
 const [gamingPostsData, setGamingPostsData] = useState([]);
+const [relevantPostCategory, setRelevantPostCategory] = useState([]);
+const [relevantGamingPostCategoryData, setRelevantGamingPostCategoryData] = useState([]);
 const fetchPostsByCategory = async (category) => {
 
-  const postCategory = await getPostsByCategory(category);
-  setPostsCategoryData(postCategory);
 
   const gamingPosts = await getPostsByCategory('gaming');
   setGamingPostsData(gamingPosts);
@@ -26,6 +24,15 @@ const fetchPrincipalPostCategory = async () => {
   const principalPostCategory = await getPrincipalPostCategory('gaming');
   setPrincipalPostCategory(principalPostCategory);
 }
+
+const fetchRelevantPostCategory = async () => {
+  //const relevantPostCategoryData = await getRelevantPostCategory(category);
+  // setRevelantPostCategoryData(relevantPostCategoryData);
+
+  const relevantGamingPostCategoryData = await getRelevantPostCategory('gaming');
+   setRelevantGamingPostCategoryData(relevantGamingPostCategoryData);}
+
+
 
 useEffect(() => {
   fetchPrincipalPostCategory()
@@ -53,22 +60,11 @@ useEffect(() => {
               //created_at={principalPostCategory.created_at}
               title={principalPostCategory.title}
               image_url={principalPostCategory.image_url}
-              content={principalPostCategory.content}
               author={principalPostCategory.author}
               category={principalPostCategory.category}
               />
               </div>
             </div>
-            
-
-            
-            <div className="hidden lg:block absolute top-0 right-0 w-24"> {/* Ajustar el tamaño y la posición del anuncio */}
-      <Adv />
-      <Adv />
-      <Adv />
-      <Adv />
-    
-  </div>
 </div>
 
 
@@ -76,7 +72,7 @@ useEffect(() => {
 <section>
   
     <h3 className="font-bold text-[#E5446D] text-[20px]" ></h3>
-    <div className="grid lg:grid-cols-3 sm:max-w-sm sm:mx-auto lg:max-w-full lg: mt-">
+    <div className="grid lg:grid-cols-3 md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-full lg: mt-">
             {gamingPostsData && gamingPostsData.map((posts) => (
               <CardNotice
                 key={posts.id}
