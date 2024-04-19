@@ -3,7 +3,7 @@ import Home from "../page/Home";
 //import Detailnotice from "../page/Detailnotice"; 
 // import Company
 import App from "../App"
-import LayoutAdmin from "../LayoutAdmin/LayoutAdmin";
+import LayoutAdmin from "../components/LayoutAdmin/LayoutAdmin";
 import HomeAdmin from "../page/Admin/HomeAdmin";
 
 
@@ -16,14 +16,14 @@ export const router = createBrowserRouter([
          path: "/home",
          element: <Home />,
        },
-       {
-         path: "/admin",
-         element: <LayoutAdmin />,
-         children: [
-           {
-             index: true,
-             element: <HomeAdmin />,
-           },
+      // {
+        // path: "/admin",
+         //element: <LayoutAdmin />,
+         //children: [
+          // {
+           //  index: true,
+            // element: <HomeAdmin />,
+          // },
            // Asegúrate de que todos los objetos estén correctamente cerrados y que los comentarios estén bien formateados
            // {
            //   path: "/detailnotice",
@@ -60,6 +60,7 @@ export const router = createBrowserRouter([
          ],
        },
      ],
-  },
- ]);
+  //},
+ //]
+);
  
