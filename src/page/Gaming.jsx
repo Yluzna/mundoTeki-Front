@@ -4,8 +4,9 @@ import CardNotice from "../components/NoticeCategory/CardNotice";
 import {getPrincipalPostCategory} from "../services/postService";
 import {getPostsByCategory} from "../services/postService";
 import {getRelevantPostCategory} from "../services/postService";
-import Adv3 from '../components/Advertisement/Adv3';
+import Adv4 from '../components/Advertisement/Adv4';
 import '../index.css';
+import AdvertCategory from '../components/Advertisement/AdvertCategory';
 
 const Gaming = () => {
   const [principalPostCategory, setPrincipalPostCategory] = useState([]);
@@ -26,13 +27,8 @@ const fetchPrincipalPostCategory = async () => {
 }
 
 const fetchRelevantPostCategory = async () => {
-  //const relevantPostCategoryData = await getRelevantPostCategory(category);
-  // setRevelantPostCategoryData(relevantPostCategoryData);
-
   const relevantGamingPostCategoryData = await getRelevantPostCategory('gaming');
    setRelevantGamingPostCategoryData(relevantGamingPostCategoryData);}
-
-
 
 useEffect(() => {
   fetchPrincipalPostCategory()
@@ -50,42 +46,45 @@ useEffect(() => {
 
   return(
     <div className="px-2 py-2">
-    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-[-100px] " >Gaming</h3>
+    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Gaming</h3>
   
-    <div className="lg:flex lg:gap-4 relative"> {/* Agregar clase relative al contenedor principal */}
-    <div className="lg:flex-1 mr-0 lg:mr- mb-8"> {/* Ajustar el tamaño del contenedor principal */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4"> {/* Ajustar la cuadrícula */}
-        <MainArticle
-     
-              key={principalPostCategory.id}
-              //created_at={principalPostCategory.created_at}
-              title={principalPostCategory.title}
-              image_url={principalPostCategory.image_url}
-              author={principalPostCategory.author}
-              category={principalPostCategory.category}
-              />
-              </div>
-            </div>
+    <div className="lg:flex lg:gap-4 relative">
+  <div className="lg:flex-1 lg:mr-4 mb-4"> {/* El primer componente ocupa más espacio */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <MainArticle
+        key={principalPostCategory.id}
+        title={principalPostCategory.title}
+        image_url={principalPostCategory.image_url}
+        author={principalPostCategory.author}
+        category={principalPostCategory.category}
+      />
+    </div>
+  </div>
+  <div className="lg:flex-1/3 mb-4 mt-1"> {/* El segundo componente ocupa menos espacio */}
+    <AdvertCategory />
+  </div>
 </div>
 
 
-<div className="px-2 py-2">
-    <h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-[#C27A00] mt-[-20px] py-1 px-4 rounded-xs w-[-100px]">Ultimas Noticias</h3>
-    <div className="bg-[#C27A00] h-[2px] w-full mt-[-10px]"></div>
+
+
+<div>
+    <h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-[#C27A00] mt-[-20px] py-1 px-4 rounded-xs w-[-100px] ">Ultimas Noticias</h3>
+    <div className="bg-[#C27A00] h-[5px] w-full mt-[-10px] mb-3"></div>
 
   
-    <div className="lg:flex lg:gap-4 relative"> {/* Agregar clase relative al contenedor principal */}
+    <div className="lg:flex lg:gap-4 relative px-2"> {/* Agregar clase relative al contenedor principal */}
     <div className="lg:flex-1 mr-0 lg:mr- mb-8"> {/* Ajustar el tamaño del contenedor principal */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4"> {/* Ajustar la cuadrícula */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4"> {/* Ajustar la cuadrícula */}
       {relevantGamingPostCategoryData.map(post => (
         <MainArticle
      
-              key={principalPostCategory.id}
-              //created_at={principalPostCategory.created_at}
-              title={principalPostCategory.title}
-              image_url={principalPostCategory.image_url}
-              author={principalPostCategory.author}
-              category={principalPostCategory.category}
+              key={post.id}
+              //created_at={post.created_at}
+              title={post.title}
+              image_url={post.image_url}
+              author={post.author}
+              category={post.category}
               />
             ))}       
             </div>
@@ -93,11 +92,16 @@ useEffect(() => {
             </div>
             </div>
 
-
+            <div>
+          <Adv4 />
+        </div>
 <section>
   
-    <h3 className="font-bold text-[#E5446D] text-[20px]" ></h3>
-    <div className="grid lg:grid-cols-3 md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-full lg: mt-">
+<h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-3xl text-[#C27A00] mt-5 py-3 px-4 rounded-xs w-[-100px] ">Tendencias</h3>
+    <div className="bg-[#C27A00] h-[7px] w-full mt-[-10px] mb-10"></div>
+    <div className="lg:flex lg:gap-4 relative">
+  <div className="lg:flex-1 lg:mr-4 mb-4"> 
+    <div className="grid lg:grid-cols-2 md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-xl ml-[9px]">
             {gamingPostsData && gamingPostsData.map((posts) => (
               <CardNotice
                 key={posts.id}
@@ -109,11 +113,15 @@ useEffect(() => {
                 description={posts.description}
               />
             ))}
+</div>
+</div>
+<div className="lg:flex-1/3 mb-4 mt-1"> {/* El segundo componente ocupa menos espacio */}
+    <AdvertCategory />
+  </div>
+</div>
+            </section>            
+</div>
 
-</div>
-            </section>
-            
-</div>
 
 
 

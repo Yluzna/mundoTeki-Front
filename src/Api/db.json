@@ -14,20 +14,21 @@
     },
     {
       "id": "2",
-      "title": "Google Podcasts shuts down tomorrow, April 2",
-      "description": "RIP Google Podcasts. Google's self-branded podcasting service shuts down tomorrow, April 2, and existing users have until July to export any subscriptions that are still on the service. Google originally announced the shutdown in September and has be... [2686 chars]",
-      "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2020/01/Google-Graveyard-760x380.jpg",
-      "created_at": "",
-      "author": "Martina López",
+      "title": "P2- Google agrees to destroy browsing data collected in Incognito mode",
+      "description": "Google agreed to destroy or de-identify billions of records of web browsing data collected when users were in its private browsing “Incognito mode,” according to a proposed class action settlement filed Monday.\nThe proposed settlement in Brown v. Goo... [2034 chars]",
+      "image_url": "https://cdn.vox-cdn.com/thumbor/zoPORZsYcJT2WjI5lx7z45IV7As=/0x0:2040x1360/1200x628/filters:focal(1020x680:1021x681)/cdn.vox-cdn.com/uploads/chorus_asset/file/24016886/STK093_Google_03.jpg",
+      "created_at": " ",
+      "author": "Pablo Castro",
       "category": "gaming",
       "isRelevant": false,
       "isRelevantCategory": true
     },
     {
       "id": "3",
-      "title": "Google Podcasts shuts down tomorrow, April 2",
-      "description": "RIP Google Podcasts. Google's self-branded podcasting service shuts down tomorrow, April 2, and existing users have until July to export any subscriptions that are still on the service. Google originally announced the shutdown in September and has be... [2686 chars]",
-      "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2020/01/Google-Graveyard-760x380.jpg",
+      "title": "p6-g Google Home app could soon work offline and finally support your old Nest camera",
+      "description": "Offline Mode launch will first require deeper Matter support",
+      "content": "In a recent Reddit AMA, Google revealed it’s working on multiple projects for its smart home platform. Chief among these is the introduction of an offline mode. The way Google Home currently works, as explained by Android Authority, is commands sent ... [3036 chars]",
+      "image_url": "https://cdn.mos.cms.futurecdn.net/h5tu6kCe5Z5kXgYqBCQPsT-1200-80.jpg",
       "created_at": "",
       "author": "Martina López",
       "category": "gaming",
@@ -36,14 +37,14 @@
     },
     {
       "id": "4",
-      "title": "Google Podcasts shuts down tomorrow, April 2",
+      "title": "4Google Podcasts shuts down tomorrow, April 2",
       "description": "RIP Google Podcasts. Google's self-branded podcasting service shuts down tomorrow, April 2, and existing users have until July to export any subscriptions that are still on the service. Google originally announced the shutdown in September and has be... [2686 chars]",
       "image_url": "https://cdn.arstechnica.net/wp-content/uploads/2020/01/Google-Graveyard-760x380.jpg",
       "created_at": "",
       "author": "Martina López",
       "category": "gaming",
       "isRelevant": false,
-      "isRelevantCategory": true
+      "isRelevantCategory": false
     },
     {
       "id": "5",
