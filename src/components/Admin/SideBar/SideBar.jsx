@@ -24,35 +24,35 @@ const [showSubmenu, setShowSubmenu] = useState(false);
     <div className={`xl:h-[100vh] overflow-y-scroll fixed xl:static w-[80%] md:w-[40%] lg:w-[30%] xl:w-auto h-full top-0 bg-gray-100 p-8 z-50 ${showMenu ? "left-0" : "left-full"} transition-all text-wrap`}>
 
       <div>
-        <h1 className='text-center text-1xl font-bold mb-10'>AdminDashboar</h1>
+        <h1 className='text-center text-3xl font-bold mb-10'>AdminDashboar</h1>
         <img src={Logo} alt="Logo" />
       </div>
       <nav className=''>
-        <Link to="/home" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick('Opción 1')}>
+        <Link to="/home" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <MdHome style={{ color: 'orange' }} /> Home
         </Link>
         
-        <Link to="/admin" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick('Opción 1')}>
+        <Link to="/admin" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <TbCategory2
             style={{ color: 'orange' }} />  Categories
         </Link>
 
-        <Link to="/admin/users" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
+        <Link to="/admin/users" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <FaUserEdit
             style={{ color: 'orange' }} />  Users
         </Link>
 
-        <Link to="/admin/post" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
+        <Link to="/admin/post" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <CiSignpostDuo1
             style={{ color: 'orange' }} /> Post
         </Link>
 
-        <Link to="/admin/images" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
+        <Link to="/admin/images" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <IoMdImages
             style={{ color: 'orange' }} /> Images
         </Link>
 
-        <Link to="/login" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
+        <Link to="/login" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <IoIosLogOut
             style={{ color: 'orange' }} /> Cerrar Sesion
         </Link>
