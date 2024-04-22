@@ -24,7 +24,7 @@ const [showSubmenu, setShowSubmenu] = useState(false);
     <div className={`xl:h-[100vh] overflow-y-scroll fixed xl:static w-[80%] md:w-[40%] lg:w-[30%] xl:w-auto h-full top-0 bg-gray-100 p-8 z-50 ${showMenu ? "left-0" : "left-full"} transition-all text-wrap`}>
 
       <div>
-        <h1 className='text-center text-3xl font-bold mb-10'>AdminDashboar</h1>
+        <h1 className='text-center text-2xl font-bold mb-10'>AdminDashboar</h1>
         <img src={Logo} alt="Logo" />
       </div>
       <nav className=''>
