@@ -33,31 +33,29 @@ const Home = () => {
 
 
   const fetchRelevantPostCategory = async () => {
-   //const relevantPostCategoryData = await getRelevantPostCategory(category);
-   // setRevelantPostCategoryData(relevantPostCategoryData);
-
-    const relevantGamingPostCategoryData = await getRelevantPostCategory('gaming');
+    const relevantGamingPostCategoryData = await getRelevantPostCategory(10);
     setRelevantGamingPostCategoryData(relevantGamingPostCategoryData);
-
-    const relevantCulturePostCategoryData = await getRelevantPostCategory('culture');
+  
+    const relevantCulturePostCategoryData = await getRelevantPostCategory(9);
     setRelevantCulturePostCategoryData(relevantCulturePostCategoryData);
-
-    const relevantCompanyPostCategoryData = await getRelevantPostCategory('company');
+  
+    const relevantCompanyPostCategoryData = await getRelevantPostCategory(3);
     setRelevantCompanyPostCategoryData(relevantCompanyPostCategoryData);
-
-    const relevantDevelopmentPostCategoryData = await getRelevantPostCategory('development');
+  
+    const relevantDevelopmentPostCategoryData = await getRelevantPostCategory(8);
     setRelevantDevelopmentPostCategoryData(relevantDevelopmentPostCategoryData);
-
-    const relevantSciencePostCategoryData = await getRelevantPostCategory('science');
+  
+    const relevantSciencePostCategoryData = await getRelevantPostCategory(4);
     setRelevantSciencePostCategoryData(relevantSciencePostCategoryData);
   }
+  
   //por categoria
   const fetchPostsByCategory = async (category) => {
 
     const postCategory = await getPostsByCategory(category);
     setPostsCategoryData(postCategory);
 
-    const lastPosts = await getPostsByCategory('last');
+    const lastPosts = await getPostsByCategory(1);
     setLastPostData(lastPosts);
 
   }
@@ -66,7 +64,7 @@ const Home = () => {
   useEffect(() => {
     fetchRelevantPost();
     
-    const categories = ['gaming', 'company', 'science', 'development', 'culture', 'last']; // Lista de categorías
+    const categories = [10, 3, 4, 8, 9, 1]; // Lista de categorías
     fetchRelevantPostCategory();
 
     categories.forEach(category => {
@@ -78,23 +76,23 @@ const Home = () => {
 
 // Mapear los datos de cada categoría y asignar las imágenes al objeto
 relevantGamingPostCategoryData.forEach(post => {
-  imagesByCategory['gaming'] = post.image_url;
+  imagesByCategory[10] = post.image_url;
 });
 
 relevantCulturePostCategoryData.forEach(post => {
-  imagesByCategory['culture'] = post.image_url;
+  imagesByCategory[9] = post.image_url;
 });
 
 relevantCompanyPostCategoryData.forEach(post => {
-  imagesByCategory['company'] = post.image_url;
+  imagesByCategory[3] = post.image_url;
 });
 
 relevantDevelopmentPostCategoryData.forEach(post => {
-  imagesByCategory['development'] = post.image_url;
+  imagesByCategory[8] = post.image_url;
 });
 
 relevantSciencePostCategoryData.forEach(post => {
-  imagesByCategory['science'] = post.image_url;
+  imagesByCategory[4] = post.image_url;
 });
 
 
@@ -163,7 +161,7 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
         <div className='sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1'>
         
-          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px] mr-[-9]  lg:w-[400px]" src={imagesByCategory['gaming']}>
+          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px] mr-[-9]  lg:w-[400px]" src={imagesByCategory[10]}>
           </img>
 
           {relevantGamingPostCategoryData.map(post => (
@@ -184,7 +182,7 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
 
         <div className="sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1">
-          <img className="object-cover lg:max-w-m  mx-auto lg:ml-[2px] sm:ml-[20px] lg:w-[400px]" src={imagesByCategory['culture']}>
+          <img className="object-cover lg:max-w-m  mx-auto lg:ml-[2px] sm:ml-[20px] lg:w-[400px]" src={imagesByCategory[9]}>
           </img>
 
           {relevantCulturePostCategoryData.map(post => (
@@ -205,7 +203,7 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
         <div className="sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1">
 
-          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory['company']}>
+          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory[3]}>
           </img>
 
           {relevantCompanyPostCategoryData.map(post => (
@@ -225,7 +223,7 @@ relevantSciencePostCategoryData.forEach(post => {
           <h3 className="font-bold bg-[#16a34a] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 mt-[-39px]" >Development</h3>
         </div>
         <div className="sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1">
-          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory['development']}>
+          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory[8]}>
           </img>
 
           {relevantDevelopmentPostCategoryData.map(post => (
@@ -247,7 +245,7 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
 
         <div className="sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1">
-          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory['science']}>
+          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory[4]}>
           </img>
 
           {relevantSciencePostCategoryData.map(post => (
