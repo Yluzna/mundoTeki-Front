@@ -49,7 +49,7 @@ useEffect(() => {
     <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Gaming</h3>
   
     <div className="lg:flex lg:gap-4 relative">
-  <div className="lg:flex-1 lg:mr-4 mb-4"> {/* El primer componente ocupa más espacio */}
+  <div className="lg:flex-1 lg:mr-4 mb-[-8px]"> {/* El primer componente ocupa más espacio */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
       <MainArticle
         key={principalPostCategory.id}
@@ -60,7 +60,7 @@ useEffect(() => {
       />
     </div>
   </div>
-  <div className="lg:flex-1/3 mb-4 mt-1"> {/* El segundo componente ocupa menos espacio */}
+  <div className="lg:flex-1/3 mt-1"> {/* El segundo componente ocupa menos espacio */}
     <AdvertCategory />
   </div>
 </div>
@@ -69,7 +69,7 @@ useEffect(() => {
 
 
 <div>
-    <h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-[#C27A00] mt-[-20px] py-1 px-4 rounded-xs w-[-100px] ">Ultimas Noticias</h3>
+    <h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-2xl text-[#C27A00] mt-[-9px] py-3 px-4 rounded-xs w-[-100px] ">Ultimas Noticias</h3>
     <div className="bg-[#C27A00] h-[5px] w-full mt-[-10px] mb-3"></div>
 
   
@@ -97,11 +97,11 @@ useEffect(() => {
         </div>
 <section>
   
-<h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-3xl text-[#C27A00] mt-5 py-3 px-4 rounded-xs w-[-100px] ">Tendencias</h3>
+<h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-2xl text-[#C27A00] mt-5 py-3 px-4 rounded-xs w-[-100px] ">Tendencias</h3>
     <div className="bg-[#C27A00] h-[7px] w-full mt-[-10px] mb-10"></div>
-    <div className="lg:flex lg:gap-4 relative">
-  <div className="lg:flex-1 lg:mr-4 mb-4"> 
-    <div className="grid lg:grid-cols-2 md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-xl ml-[9px]">
+    <div className="lg:flex relative">
+  <div className="lg:flex-1 mb-4"> 
+    <div className="grid lg:grid-cols-3  md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-7xl lg:ml-[-30px]">
             {gamingPostsData && gamingPostsData.map((posts) => (
               <CardNotice
                 key={posts.id}
