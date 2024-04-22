@@ -32,27 +32,27 @@ const [showSubmenu, setShowSubmenu] = useState(false);
           <MdHome style={{ color: 'orange' }} /> Home
         </Link>
         
-        <Link to="/" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick('Opción 1')}>
+        <Link to="/admin" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick('Opción 1')}>
           <TbCategory2
             style={{ color: 'orange' }} />  Categories
         </Link>
 
-        <Link to="/" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
+        <Link to="/admin/users" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
           <FaUserEdit
             style={{ color: 'orange' }} />  Users
         </Link>
 
-        <Link to="/" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
+        <Link to="/admin/post" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
           <CiSignpostDuo1
             style={{ color: 'orange' }} /> Post
         </Link>
 
-        <Link to="/" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
+        <Link to="/admin/images" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
           <IoMdImages
             style={{ color: 'orange' }} /> Images
         </Link>
 
-        <Link to="/" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
+        <Link to="/login" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors">
           <IoIosLogOut
             style={{ color: 'orange' }} /> Cerrar Sesion
         </Link>
