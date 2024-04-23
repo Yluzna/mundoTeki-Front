@@ -60,7 +60,7 @@ useEffect(() => {
       />
     </div>
   </div>
-  <div className="lg:flex-1/3 mt-1"> {/* El segundo componente ocupa menos espacio */}
+  <div className="lg:flex-1/3 mt-[-8px]"> {/* El segundo componente ocupa menos espacio */}
     <AdvertCategory />
   </div>
 </div>
@@ -115,11 +115,14 @@ useEffect(() => {
             ))}
 </div>
 </div>
-<div className="lg:flex-1/3 mb-4 mt-1"> {/* El segundo componente ocupa menos espacio */}
+<div className="lg:flex-1/3 mb-4 mt-[-40px]"> 
     <AdvertCategory />
   </div>
 </div>
-            </section>            
+            </section>  
+            <div className='mb-3 mt-9'>
+          <Adv4 />
+        </div>           
 </div>
 
 
