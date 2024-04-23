@@ -55,8 +55,8 @@ function Navbar() {
         <>
           <Link to="/company" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Empresas y Startups</Link>
           <Link to="/science&tecnology" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Ciencia y tecnología</Link>
-          <Link to="/culture&segurity" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Cultura y Seguridad digital</Link>
-          <Link to="/developmen&programing" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Desarrollo y programación</Link>
+          <Link to="/culture" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Cultura y Seguridad digital</Link>
+          <Link to="/development" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Desarrollo y programación</Link>
           <Link to="/gaming" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Gaming</Link>
           <Link to="/latestnews" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</Link>
         </>
