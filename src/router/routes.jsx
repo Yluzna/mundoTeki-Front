@@ -1,8 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../page/Home";
-//import Detailnotice from "../page/Detailnotice"; 
 import App from "../App"
-import LayoutAdmin from "../LayoutAdmin/LayoutAdmin";
+import Gaming from "../page/Gaming"
+import Development from "../page/Development"
+import Culture from "../page/Culture"
+import LayoutAdmin from "../components/LayoutAdmin/LayoutAdmin"
 import HomeAdmin from "../page/Admin/HomeAdmin";
 import Users from "../page/Admin/Users"; 
 import Post from "../page/Admin/Post";
@@ -26,54 +28,33 @@ export const router = createBrowserRouter([
              index: true,
              element: <HomeAdmin />,
            }, 
-             {
-            path: "/admin/users",
-            element: <Users />,
-          }, 
            {
-            path: "/admin/post",
-            element: <Post />,
-          },
-          
-          {
-            path: "/admin/images",
-            element: <Images />
-          },
-           // Asegúrate de que todos los objetos estén correctamente cerrados y que los comentarios estén bien formateados
-           // {
-           //   path: "/detailnotice",
-           //   element: <Detail />,
-           // },
-           // {
-           //   path: "/newnotice",
-           //   element: <AddNewNotice />,
-           // },
-           // {
-           //   path: "/company",
-           //   element: <Company />,
-           // },
-           // {
-           //   path: "/science&tecnology",
-           //   element: <Science />,
-           // },
-           // {
-           //   path: "/culture&segurity",
-           //   element: <Culture />,
-           // },
-           // {
-           //   path: "/developmen&programing",
-           //   element: <Development />,
-           // },
-           // {
-           //   path: "/gaming",
-           //   element: <Gaming />,
-           // },
-           // {
-           //   path: "/latestnews",
-           //   element: <LatestNews />,
-           // },
-         ],
-       },
-     ],
+             path: "/admin/users",
+             element: <Users />,
+           }, 
+           {
+             path: "/admin/post",
+             element: <Post />,
+           },
+           {
+             path: "/admin/images",
+             element: <Images />
+           }
+         ]
+       }
+     ]
   },
-]);
+  {
+     path: "/gaming",
+     element: <Gaming />,
+  },
+  {
+     path: "/development",
+     element: <Development />,
+  },
+  {
+     path: "/culture",
+     element: <Culture />,
+  }
+ ]);
+ 
