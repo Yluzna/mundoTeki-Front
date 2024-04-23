@@ -5,6 +5,8 @@ import Login from "../page/Login";
 
 //import Detailnotice from "../page/Detailnotice";
 import App from "../App"
+import LayoutAdmin from "../components/LayoutAdmin/LayoutAdmin";
+import HomeAdmin from "../page/Admin/HomeAdmin";
 
 
 export const router = createBrowserRouter([
