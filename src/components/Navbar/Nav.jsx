@@ -58,7 +58,7 @@ function Navbar() {
           <Link to="/culture" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Cultura y Seguridad digital</Link>
           <Link to="/development" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Desarrollo y programación</Link>
           <Link to="/gaming" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Gaming</Link>
-          <Link to="/latestnews" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</Link>
+          <Link to="/last" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</Link>
         </>
       )}
     </div>
