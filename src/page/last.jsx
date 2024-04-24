@@ -8,27 +8,27 @@ import Adv4 from '../components/Advertisement/Adv4';
 import '../index.css';
 import AdvertCategory from '../components/Advertisement/AdvertCategory';
 
-const Culture = () => {
+const Last = () => {
   const [principalPostCategory, setPrincipalPostCategory] = useState([]);
 const [lastPostData, setLastPostData] = useState([]);
-const [culturePostsData, setCulturePostsData] = useState([]);
+const [lastPostsData, setLastPostsData] = useState([]);
 const [relevantPostCategory, setRelevantPostCategory] = useState([]);
-const [relevantCulturePostCategoryData, setRelevantCulturePostCategoryData] = useState([]);
+const [relevantLastPostCategoryData, setRelevantLastPostCategoryData] = useState([]);
 const fetchPostsByCategory = async (category) => {
 
 
-  const culturePosts = await getPostsByCategory(9);
-  setCulturePostsData(culturePosts);
+  const lastPosts = await getPostsByCategory(1);
+  setLastPostsData(lastPosts);
 
 }
 const fetchPrincipalPostCategory = async () => {
-  const principalPostCategory = await getPrincipalPostCategory(9);
+  const principalPostCategory = await getPrincipalPostCategory(1);
   setPrincipalPostCategory(principalPostCategory);
 }
 
 const fetchRelevantPostCategory = async () => {
-  const relevantCulturePostCategoryData = await getRelevantPostCategory(9);
-   setRelevantCulturePostCategoryData(relevantCulturePostCategoryData);}
+  const relevantLastPostCategoryData = await getRelevantPostCategory(1);
+   setRelevantLastPostCategoryData(relevantLastPostCategoryData);}
 
 useEffect(() => {
   fetchPrincipalPostCategory()
@@ -46,7 +46,7 @@ useEffect(() => {
 
   return(
     <div className="px-2 py-2">
-    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Culture</h3>
+    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Últimas noticias</h3>
   
     <div className="lg:flex lg:gap-4 relative">
   <div className="lg:flex-1 lg:mr-4 mb-[-8px]"> {/* El primer componente ocupa más espacio */}
@@ -76,11 +76,11 @@ useEffect(() => {
     <div className="lg:flex lg:gap-4 relative px-2"> {/* Agregar clase relative al contenedor principal */}
     <div className="lg:flex-1 mr-0 lg:mr- mb-8"> {/* Ajustar el tamaño del contenedor principal */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4"> {/* Ajustar la cuadrícula */}
-      {relevantCulturePostCategoryData.map(post => (
+      {relevantLastPostCategoryData.map(post => (
         <MainArticle
      
               key={post.id}
-              //created_at={post.created_at}
+              created_at={post.created_at}
               title={post.title}
               image_url={post.image_url}
               author={post.author}
@@ -102,7 +102,7 @@ useEffect(() => {
     <div className="lg:flex relative">
   <div className="lg:flex-1 mb-4"> 
     <div className="grid lg:grid-cols-3  md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-7xl lg:ml-[-25px]">
-            {culturePostsData && culturePostsData.map((posts) => (
+            {lastPostsData && lastPostsData.map((posts) => (
               <CardNotice
                 key={posts.id}
                 created_at={posts.created_at}
@@ -119,10 +119,12 @@ useEffect(() => {
     <AdvertCategory />
   </div>
 </div>
-<div className='mb-3 mt-9'>
+            </section>    
+
+
+             <div className='mb-3 mt-9'>
           <Adv4 />
-        </div> 
-            </section>            
+        </div>        
 </div>
 
 
@@ -132,4 +134,4 @@ useEffect(() => {
 
   )
 };
-export default Culture;
+export default Last;
