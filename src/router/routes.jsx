@@ -14,15 +14,15 @@ import Login from '../page/LoginRegister/Login/Login'
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Login />,
-  },
-  {
-    path: '/',
     element: <App />,
     children: [
       {
-        path: 'home',
+        path: '/',
         element: <Home />,
+      },
+      {
+        path: 'login',
+        element: <Login />,
       },
       {
         path: 'gaming',
