@@ -4,6 +4,8 @@ import App from "../App";
 import Gaming from "../page/Gaming";
 import Development from "../page/Development";
 import Culture from "../page/Culture";
+import Company from "../page/Company";
+import Science from "../page/Science";
 
 export const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ export const router = createBrowserRouter([
     {
       path: "/culture",
       element: <Culture />,
+},
+{
+  path: "/company",
+  element: <Company />,
+},
+{
+  path: "/science",
+  element: <Science />,
 },
     ],
   },

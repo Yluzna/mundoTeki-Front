@@ -8,27 +8,27 @@ import Adv4 from '../components/Advertisement/Adv4';
 import '../index.css';
 import AdvertCategory from '../components/Advertisement/AdvertCategory';
 
-const Company= () => {
+const Last = () => {
   const [principalPostCategory, setPrincipalPostCategory] = useState([]);
 const [lastPostData, setLastPostData] = useState([]);
-const [companyPostsData, setCompanyPostsData] = useState([]);
+const [lastPostsData, setLastPostsData] = useState([]);
 const [relevantPostCategory, setRelevantPostCategory] = useState([]);
-const [relevantCompanyPostCategoryData, setRelevantCompanyPostCategoryData] = useState([]);
+const [relevantLastPostCategoryData, setRelevantLastPostCategoryData] = useState([]);
 const fetchPostsByCategory = async (category) => {
 
 
-  const companygPosts = await getPostsByCategory('3');
-  setCompanyPostsData(companygPosts);
+  const lastPosts = await getPostsByCategory('1');
+  setLastPostsData(lastPosts);
 
 }
 const fetchPrincipalPostCategory = async () => {
-  const principalPostCategory = await getPrincipalPostCategory('3');
+  const principalPostCategory = await getPrincipalPostCategory('1');
   setPrincipalPostCategory(principalPostCategory);
 }
 
 const fetchRelevantPostCategory = async () => {
-  const relevantCompanyPostCategoryData = await getRelevantPostCategory('3');
-   setRelevantCompanyPostCategoryData(relevantCompanyPostCategoryData);}
+  const relevantLastPostCategoryData = await getRelevantPostCategory('1');
+   setRelevantLastPostCategoryData(relevantLastPostCategoryData);}
 
 useEffect(() => {
   fetchPrincipalPostCategory()
@@ -46,7 +46,7 @@ useEffect(() => {
 
   return(
     <div className="px-2 py-2">
-    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Empresas y Startups</h3>
+    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Últimas noticias</h3>
   
     <div className="lg:flex lg:gap-4 relative">
   <div className="lg:flex-1 lg:mr-4 mb-[-8px]"> {/* El primer componente ocupa más espacio */}
@@ -76,7 +76,7 @@ useEffect(() => {
     <div className="lg:flex lg:gap-4 relative px-2"> {/* Agregar clase relative al contenedor principal */}
     <div className="lg:flex-1 mr-0 lg:mr- mb-8"> {/* Ajustar el tamaño del contenedor principal */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4"> {/* Ajustar la cuadrícula */}
-      {relevantCompanyPostCategoryData.map(post => (
+      {relevantLastPostCategoryData.map(post => (
         <MainArticle
      
               key={post.id}
@@ -102,7 +102,7 @@ useEffect(() => {
     <div className="lg:flex relative">
   <div className="lg:flex-1 mb-4"> 
     <div className="grid lg:grid-cols-3  md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-7xl lg:ml-[-25px]">
-            {companyPostsData && companyPostsData.map((posts) => (
+            {lastPostsData && lastPostsData.map((posts) => (
               <CardNotice
                 key={posts.id}
                 created_at={posts.created_at}
@@ -134,4 +134,4 @@ useEffect(() => {
 
   )
 };
-export default Company;
+export default Last;

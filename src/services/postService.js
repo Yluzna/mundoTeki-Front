@@ -66,7 +66,7 @@ export const getRelevantPostCategory = async (IDcategoryfront) =>{
             relevantPostCategory[relevantPostCategory.length - 1], relevantPostCategory[relevantPostCategory.length - 2], relevantPostCategory[relevantPostCategory.length - 3]
 
         ]
-        console.log(listRelevant)
+        
         return listRelevant;
     } catch (error) {
         console.error('Error fetching data: ', error);
