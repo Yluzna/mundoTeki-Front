@@ -13,43 +13,51 @@ import Login from '../page/LoginRegister/Login/Login'
 
 export const router = createBrowserRouter([
   {
-     path: "/",
-     element: <App />,
-     children: [
-       {
-         path: "/home",
-         element: <Home />,
-       },
-       {
-         path: "/admin",
-         element: <LayoutAdmin />,
-         children: [
-           {
-             index: true,
-             element: <HomeAdmin />,
-           }, 
-           {
-             path: "/admin/users",
-             element: <Users />,
-           }, 
-           {
-             path: "/admin/post",
-             element: <Post />,
-           },
-           {
-             path: "/admin/images",
-             element: <Images />
-           }
-         ]
-       }
-     ]
-  },
-  {
-     path: "/gaming",
-     element: <Gaming />,
-  },
-  {
-     path: "/development",
-     element: <Development />,
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: 'login',
+        element: <Login />,
+      },
+      {
+        path: 'gaming',
+        element: <Gaming />,
+      },
+      {
+        path: 'development',
+        element: <Development />,
+      },
+      {
+        path: 'culture',
+        element: <Culture />,
+      },
+      {
+        path: 'admin',
+        element: <LayoutAdmin />,
+        children: [
+          {
+            index: true,
+            element: <HomeAdmin />,
+          },
+          {
+            path: 'users',
+            element: <Users />,
+          },
+          {
+            path: 'post',
+            element: <Post />,
+          },
+          {
+            path: 'images',
+            element: <Images />,
+          },
+        ],
+      },
+    ],
   },
 ]);
