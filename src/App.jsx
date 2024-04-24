@@ -1,19 +1,22 @@
-import './App.css'
-import NavBar from './components/Navbar/Nav'
-import Categories from './components/Categories/Categories'
-import Footer from './components/Footer/Footer'
-import { Outlet } from 'react-router'
-
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import NavBar from './components/Navbar/Nav';
+import Categories from './components/Categories/Categories';
+import Footer from './components/Footer/Footer';
+import { Outlet } from 'react-router-dom';
 
 function App() {
-  return (
+ const location = useLocation();
+ const isAdminOrLoginPage = location.pathname.includes('/admin') || location.pathname.includes('/login');
+
+ return (
     <>
-    <NavBar/>
-    <Categories />
-    <Outlet />
-    <Footer />
+      {!isAdminOrLoginPage && <NavBar />}
+      {!isAdminOrLoginPage && <Categories />}
+      <Outlet />
+      {!isAdminOrLoginPage && <Footer />}
     </>
-  )
+ );
 }
 
 export default App;
