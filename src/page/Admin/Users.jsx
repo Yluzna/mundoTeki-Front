@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import User from "../../components/Admin/User/User";
+import UserTitle from "../../components/Admin/User/UserTitle";
 import UsersTable from "../../components/Admin/User/UsersTable";
 
 
@@ -8,7 +8,7 @@ import UsersTable from "../../components/Admin/User/UsersTable";
 const Users = () => {
     return (
 <>
-<User />
+<UserTitle />
 <UsersTable />
 </>
     );
