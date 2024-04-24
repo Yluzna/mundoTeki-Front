@@ -17,18 +17,18 @@ const [relevantGamingPostCategoryData, setRelevantGamingPostCategoryData] = useS
 const fetchPostsByCategory = async (category) => {
 
 
-  const gamingPosts = await getPostsByCategory('10');
+  const gamingPosts = await getPostsByCategory(10);
   setGamingPostsData(gamingPosts);
 
 }
 const fetchPrincipalPostCategory = async () => {
-  const principalPostCategory = await getPrincipalPostCategory('10');
+  const principalPostCategory = await getPrincipalPostCategory(10);
   setPrincipalPostCategory(principalPostCategory);
 }
 
 const fetchRelevantPostCategory = async () => {
-  const relevantGamingPostCategoryData = await getRelevantPostCategory('10');
-   setRelevantGamingPostCategoryData(relevantGamingPostCategoryData);}
+  const relevantGamingPostCategoryData = await getRelevantPostCategory(10);
+  setRelevantGamingPostCategoryData(relevantGamingPostCategoryData);}
 
 useEffect(() => {
   fetchPrincipalPostCategory()
@@ -43,7 +43,7 @@ useEffect(() => {
 }, []);
 
 
-
+console.log(gamingPostsData)
   return(
     <div className="px-2 py-2">
     <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Gaming</h3>
@@ -56,7 +56,7 @@ useEffect(() => {
         title={principalPostCategory.title}
         image_url={principalPostCategory.image_url}
         author={principalPostCategory.author}
-        category={principalPostCategory.category}
+        //category={principalPostCategory.category}
       />
     </div>
   </div>
@@ -76,7 +76,8 @@ useEffect(() => {
     <div className="lg:flex lg:gap-4 relative px-2"> {/* Agregar clase relative al contenedor principal */}
     <div className="lg:flex-1 mr-0 lg:mr- mb-8"> {/* Ajustar el tamaño del contenedor principal */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4"> {/* Ajustar la cuadrícula */}
-      {relevantGamingPostCategoryData.map(post => (
+      { relevantGamingPostCategoryData
+       .map(post => (
         <MainArticle
      
               key={post.id}
@@ -84,9 +85,10 @@ useEffect(() => {
               title={post.title}
               image_url={post.image_url}
               author={post.author}
-              category={post.category}
+              //category={post.category}
               />
-            ))}       
+            ))
+            }       
             </div>
             </div>
             </div>
@@ -102,7 +104,8 @@ useEffect(() => {
     <div className="lg:flex relative">
   <div className="lg:flex-1 mb-4"> 
     <div className="grid lg:grid-cols-3  md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-7xl lg:ml-[-25px]">
-            {gamingPostsData && gamingPostsData.map((posts) => (
+            {/* {gamingPostsData && gamingPostsData.length && gamingPostsData.map((posts) => (
+              
               <CardNotice
                 key={posts.id}
                 created_at={posts.created_at}
@@ -112,7 +115,24 @@ useEffect(() => {
                 category={posts.category}
                 description={posts.description}
               />
-            ))}
+            ))} */}
+
+            { gamingPostsData 
+                ? gamingPostsData.map((posts) => (
+              
+                  <CardNotice
+                    key={posts.id}
+                    created_at={posts.created_at}
+                    title={posts.title}
+                    image_url={posts.image_url}
+                    author={posts.author}
+                    category={posts.category}
+                    description={posts.description}
+                  />
+                ))
+                : <div> <p>No hay Noticias</p> </div>
+
+            }
 </div>
 </div>
 <div className="lg:flex-1/3 mb-4 mt-[-40px]"> 

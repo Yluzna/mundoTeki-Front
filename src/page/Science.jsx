@@ -17,17 +17,17 @@ const [relevantSciencePostCategoryData, setRelevantSciencePostCategoryData] = us
 const fetchPostsByCategory = async (category) => {
 
 
-  const sciencePosts = await getPostsByCategory('4');
+  const sciencePosts = await getPostsByCategory(4);
   setSciencePostsData(sciencePosts);
 
 }
 const fetchPrincipalPostCategory = async () => {
-  const principalPostCategory = await getPrincipalPostCategory('4');
+  const principalPostCategory = await getPrincipalPostCategory(4);
   setPrincipalPostCategory(principalPostCategory);
 }
 
 const fetchRelevantPostCategory = async () => {
-  const relevantSciencePostCategoryData = await getRelevantPostCategory('4');
+  const relevantSciencePostCategoryData = await getRelevantPostCategory(4);
    setRelevantSciencePostCategoryData(relevantSciencePostCategoryData);}
 
 useEffect(() => {

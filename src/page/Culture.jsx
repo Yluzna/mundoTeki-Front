@@ -17,17 +17,17 @@ const [relevantCulturePostCategoryData, setRelevantCulturePostCategoryData] = us
 const fetchPostsByCategory = async (category) => {
 
 
-  const culturePosts = await getPostsByCategory('8');
+  const culturePosts = await getPostsByCategory(9);
   setCulturePostsData(culturePosts);
 
 }
 const fetchPrincipalPostCategory = async () => {
-  const principalPostCategory = await getPrincipalPostCategory('8');
+  const principalPostCategory = await getPrincipalPostCategory(9);
   setPrincipalPostCategory(principalPostCategory);
 }
 
 const fetchRelevantPostCategory = async () => {
-  const relevantCulturePostCategoryData = await getRelevantPostCategory('8');
+  const relevantCulturePostCategoryData = await getRelevantPostCategory(9);
    setRelevantCulturePostCategoryData(relevantCulturePostCategoryData);}
 
 useEffect(() => {

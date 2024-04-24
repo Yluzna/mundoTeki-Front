@@ -17,17 +17,17 @@ const [relevantCompanyPostCategoryData, setRelevantCompanyPostCategoryData] = us
 const fetchPostsByCategory = async (category) => {
 
 
-  const companygPosts = await getPostsByCategory('3');
+  const companygPosts = await getPostsByCategory(3);
   setCompanyPostsData(companygPosts);
 
 }
 const fetchPrincipalPostCategory = async () => {
-  const principalPostCategory = await getPrincipalPostCategory('3');
+  const principalPostCategory = await getPrincipalPostCategory(3);
   setPrincipalPostCategory(principalPostCategory);
 }
 
 const fetchRelevantPostCategory = async () => {
-  const relevantCompanyPostCategoryData = await getRelevantPostCategory('3');
+  const relevantCompanyPostCategoryData = await getRelevantPostCategory(3);
    setRelevantCompanyPostCategoryData(relevantCompanyPostCategoryData);}
 
 useEffect(() => {

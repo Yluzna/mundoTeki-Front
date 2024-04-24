@@ -17,17 +17,17 @@ const [relevantLastPostCategoryData, setRelevantLastPostCategoryData] = useState
 const fetchPostsByCategory = async (category) => {
 
 
-  const lastPosts = await getPostsByCategory('1');
+  const lastPosts = await getPostsByCategory(1);
   setLastPostsData(lastPosts);
 
 }
 const fetchPrincipalPostCategory = async () => {
-  const principalPostCategory = await getPrincipalPostCategory('1');
+  const principalPostCategory = await getPrincipalPostCategory(1);
   setPrincipalPostCategory(principalPostCategory);
 }
 
 const fetchRelevantPostCategory = async () => {
-  const relevantLastPostCategoryData = await getRelevantPostCategory('1');
+  const relevantLastPostCategoryData = await getRelevantPostCategory(1);
    setRelevantLastPostCategoryData(relevantLastPostCategoryData);}
 
 useEffect(() => {

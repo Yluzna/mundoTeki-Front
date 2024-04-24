@@ -30,11 +30,16 @@ const Home = () => {
     setRelevantPostData(relevantPost);
   }
 
+  console.log(relevantPostData.image_url)
+
+
+
 
 
   const fetchRelevantPostCategory = async () => {
     const relevantGamingPostCategoryData = await getRelevantPostCategory(10);
     setRelevantGamingPostCategoryData(relevantGamingPostCategoryData);
+
   
     const relevantCulturePostCategoryData = await getRelevantPostCategory(9);
     setRelevantCulturePostCategoryData(relevantCulturePostCategoryData);
@@ -48,6 +53,8 @@ const Home = () => {
     const relevantSciencePostCategoryData = await getRelevantPostCategory(4);
     setRelevantSciencePostCategoryData(relevantSciencePostCategoryData);
   }
+
+  console.log(relevantGamingPostCategoryData)
   
   //por categoria
   const fetchPostsByCategory = async (category) => {
@@ -72,15 +79,16 @@ const Home = () => {
     });
   }, []);
 
+
   let imagesByCategory = {};
 
 // Mapear los datos de cada categoría y asignar las imágenes al objeto
 relevantGamingPostCategoryData.forEach(post => {
   imagesByCategory[10] = post.image_url;
 });
-
-relevantCulturePostCategoryData.forEach(post => {
-  imagesByCategory[9] = post.image_url;
+console.log((relevantCulturePostCategoryData))
+ relevantCulturePostCategoryData.forEach(post => {
+ imagesByCategory[9] = post.image_url;
 });
 
 relevantCompanyPostCategoryData.forEach(post => {

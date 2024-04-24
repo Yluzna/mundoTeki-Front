@@ -27,9 +27,9 @@ const fetchPrincipalPostCategory = async () => {
 }
 
 const fetchRelevantPostCategory = async () => {
-  const relevantDevelopmentPostCategoryData = await getRelevantPostCategory('8');
-   setRelevantDevelopmentPostCategoryData(relevantDevelopmentPostCategoryData);}
-
+  const relevantDevelopmentPostCategoryData = await getRelevantPostCategory(8);
+  setRelevantDevelopmentPostCategoryData(relevantDevelopmentPostCategoryData);
+}
 useEffect(() => {
   fetchPrincipalPostCategory()
  

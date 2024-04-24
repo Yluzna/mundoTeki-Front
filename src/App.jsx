@@ -4,10 +4,12 @@ import Categories from './components/Categories/Categories'
 import Footer from './components/Footer/Footer'
 import Cardnotice from './components/Cardnotice/Card'
 import { Outlet } from 'react-router'
+import Test from './page/test'
 
 
 
 function App() {
+
   return (
     <>
     <NavBar/>
