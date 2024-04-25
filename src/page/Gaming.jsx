@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import MainArticle from "../components/MainArticle/MainArticle";
 import CardNotice from "../components/NoticeCategory/CardNotice";
+import Notice from '../components/NoticeCategory/Notice';
 import {getPrincipalPostCategory} from "../services/postService";
 import {getPostsByCategory} from "../services/postService";
 import {getRelevantPostCategory} from "../services/postService";
@@ -56,7 +57,7 @@ console.log(gamingPostsData)
         title={principalPostCategory.title}
         image_url={principalPostCategory.image_url}
         author={principalPostCategory.author}
-        //category={principalPostCategory.category}
+        category={principalPostCategory.category}
       />
     </div>
   </div>
@@ -73,9 +74,9 @@ console.log(gamingPostsData)
     <div className="bg-[#C27A00] h-[5px] w-full mt-[-10px] mb-3"></div>
 
   
-    <div className="lg:flex lg:gap-4 relative px-2"> {/* Agregar clase relative al contenedor principal */}
-    <div className="lg:flex-1 mr-0 lg:mr- mb-8"> {/* Ajustar el tamaño del contenedor principal */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4"> {/* Ajustar la cuadrícula */}
+    <div className="lg:flex lg:gap-4 mt-[120px] lg:mt-[6px]  relative px-2"> {/* Agregar clase relative al contenedor principal */}
+    <div className="lg:flex-1 mr-0 mb-[-69px]"> {/* Ajustar el tamaño del contenedor principal */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4"> {/* Ajustar la cuadrícula */}
       { relevantGamingPostCategoryData
        .map(post => (
         <MainArticle
@@ -99,11 +100,11 @@ console.log(gamingPostsData)
         </div>
 <section>
   
-<h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-2xl text-[#C27A00] mt-5 py-3 px-4 rounded-xs w-[-100px] ">Tendencias</h3>
-    <div className="bg-[#C27A00] h-[7px] w-full mt-[-10px] mb-10"></div>
+<h3 className="font-bold sm:mr-4 lg:mr-8 text-2xl lg:text-2xl text-[#C27A00] mt-5 py-3 px-4 rounded-xs w-[-100px] ">Tendencias</h3>
+    <div className="bg-[#C27A00] h-[7px] w-full mt-[-10px] mb-3"></div>
     <div className="lg:flex relative">
-  <div className="lg:flex-1 mb-4"> 
-    <div className="grid lg:grid-cols-3  md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-7xl lg:ml-[-25px]">
+  <div className="lg:flex-1 mb-6 lg:mt-[-43px]"> 
+    <div className="grid lg:grid-cols-2  md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-7xl  ">
             {/* {gamingPostsData && gamingPostsData.length && gamingPostsData.map((posts) => (
               
               <CardNotice
@@ -120,7 +121,7 @@ console.log(gamingPostsData)
             { gamingPostsData 
                 ? gamingPostsData.map((posts) => (
               
-                  <CardNotice
+                  <Notice
                     key={posts.id}
                     created_at={posts.created_at}
                     title={posts.title}
