@@ -1,4 +1,3 @@
-
 const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 export const getAllPosts = async () => {
@@ -45,8 +44,9 @@ export const getPrincipalPostCategory = async (IDcategoryfront) => {
         const posts = await response.json();
         //console.log(posts);
         const principalPostCategory = posts.filter(post => post.category_id === IDcategoryfront);
-       //console.log(principalPostCategory); 
-        return principalPostCategory;
+        const postPrincipal=principalPostCategory[principalPostCategory.length - 1]
+       console.log(principalPostCategory); 
+        return postPrincipal;
         // return posts;
 
     } catch (error) {
@@ -59,14 +59,14 @@ export const getRelevantPostCategory = async (IDcategoryfront) =>{
         const posts = await response.json();
         //const relevantPostCategory = posts.filter(post => post.category === category && post.isRelevantCategory === true);
 
-        // console.log({relevantPostCategory})
-        //console.log(posts)
+       
+        
         const relevantPostCategory = posts.filter(post => post.category_id === IDcategoryfront)
 
-        console.log(relevantPostCategory)
-        //console.log(relevantPostCategory);
+        
+        
         const listRelevant=[
-            relevantPostCategory[relevantPostCategory.length - 2], relevantPostCategory[relevantPostCategory.length - 3], relevantPostCategory[relevantPostCategory.length - 4]
+            relevantPostCategory[relevantPostCategory.length - 1], relevantPostCategory[relevantPostCategory.length - 2], relevantPostCategory[relevantPostCategory.length - 3]
 
         ]
         
@@ -75,10 +75,3 @@ export const getRelevantPostCategory = async (IDcategoryfront) =>{
         console.error('Error fetching data: ', error);
 }
 }
-// get post by id
-
-// create post
-
-// update post
-
-// delete post
