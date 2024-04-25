@@ -5,15 +5,16 @@ import Gaming from '../page/Gaming';
 import Development from '../page/Development';
 import Culture from '../page/Culture';
 import LayoutAdmin from '../components/LayoutAdmin/LayoutAdmin';
-import HomeAdmin from '../page/Admin/HomeAdmin';
+import NewPost from '../page/Admin/NewPost';
 import Users from '../page/Admin/Users';
 import Post from '../page/Admin/Post';
-import Images from '../page/Admin/Images';
-import Login from '../page/LoginUser';
-import Register from '../page/RegisterUser';
-import RegisterUser from '../page/RegisterUser';
+import Login from '../page/LoginRegister/Login/Login'
 
 export const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
   {
     path: '/',
     element: <App />,
@@ -48,7 +49,7 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
-            element: <HomeAdmin />,
+            element: <Users />,
           },
           {
             path: 'users',
@@ -57,10 +58,10 @@ export const router = createBrowserRouter([
           {
             path: 'post',
             element: <Post />,
-          },
+          }, 
           {
-            path: 'images',
-            element: <Images />,
+            path: 'Newpost',
+            element: <NewPost />,
           },
         ],
       },

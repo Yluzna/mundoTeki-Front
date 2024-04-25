@@ -9,8 +9,7 @@ import { IoMdImages } from "react-icons/io";
 import { IoIosLogOut } from "react-icons/io";
 import { RiMenu2Line } from "react-icons/ri";
 import { IoClose } from "react-icons/io5";
-
-
+import { MdPostAdd } from "react-icons/md";
 
 
 
@@ -31,11 +30,6 @@ const [showSubmenu, setShowSubmenu] = useState(false);
         <Link to="/home" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <MdHome style={{ color: 'orange' }} /> Home
         </Link>
-        
-        <Link to="/admin" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
-          <TbCategory2
-            style={{ color: 'orange' }} />  Categories
-        </Link>
 
         <Link to="/admin/users" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <FaUserEdit
@@ -47,9 +41,10 @@ const [showSubmenu, setShowSubmenu] = useState(false);
             style={{ color: 'orange' }} /> Post
         </Link>
 
-        <Link to="/admin/images" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
-          <IoMdImages
-            style={{ color: 'orange' }} /> Images
+        <Link to="/admin/Newpost" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
+          <MdPostAdd
+
+            style={{ color: 'orange' }} /> NewPost
         </Link>
 
         <Link to="/" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
