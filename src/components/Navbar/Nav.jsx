@@ -33,7 +33,7 @@ function Navbar() {
  }, []);
 
  return (
-    <nav className="flex items-center justify-between px-9 py-8 text-black text-center border-2">
+    <nav className="flex items-center justify-between px-9 py-2 text-black text-center border border-b-[#c27a00]">
       <div className="lg:hidden">
         <button onClick={toggleMenu} className="focus:outline-none hover:text-amber-600">
           {menuState.open ? <FiX size={28} /> : <FiMenu size={28} />}
@@ -41,7 +41,9 @@ function Navbar() {
       </div>
 
       <div className="text-center flex-grow">
-        <img src="/MT.png" alt="Logo" className="h-14 mx-auto" /> 
+        <img src={"./src/images/teki.PNG"}
+            alt="Mundo Teki"
+            className="mx-auto h-14 m-4 rounded-lg" /> 
       </div>
 
       <div className="flex items-center hover:text-amber-600">
