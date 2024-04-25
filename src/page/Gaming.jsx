@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MainArticle from "../components/MainArticle/MainArticle";
-import Notice from '../components/NoticeCategory/Notice';
-import CardNotice from '../components/NoticeCategory/CardNotice';
+import Card from '../components/Cardnotice/Card';
 import {getPrincipalPostCategory} from "../services/postService";
 import {getPostsByCategory} from "../services/postService";
 import {getRelevantPostCategory} from "../services/postService";
@@ -70,12 +69,12 @@ useEffect(() => {
 
 
 <div>
-    <h3 className="font-bold sm:mr-4 lg:mr-8 sm:text-2xl lg:text-2xl text-[#C27A00] mt-[-130px] lg:mt-[-35px] md:mt-[-40px] py-3 rounded-xs w-[-100px] ">Ultimas Noticias</h3>
-    <div className="bg-[#C27A00] h-[5px] w-full mt-[-10px] mb-3"></div>
+    <h3 className="font-bold sm:mr-4 lg:mr-8 text-2xl lg:text-xl text-[#C27A00] mt-[-30px] lg:mt-[-35px] md:mt-[-40px] py-3 rounded-xs w-[-100px] ">Ultimas Noticias</h3>
+    <div className="bg-[#C27A00] h-[5px] w-full mt-[-10px] mb-6"></div>
 
   
     <div className="lg:flex lg:gap-4 mt-[16px] lg:mt-[6px] md:mt-[120px] sm:mb-[-30px] relative"> {/* Agregar clase relative al contenedor principal */}
-    <div className="lg:flex-1 mr-0 md:mb-2 lg:mb-2 sm:"> {/* Ajustar el tamaño del contenedor principal */}
+    <div className="lg:flex-1 mr-0 md:mb-2 lg:mb-[8px] sm:"> {/* Ajustar el tamaño del contenedor principal */}
       <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-4 md:grid-cols-3 md:gap-4"> {/* Ajustar la cuadrícula */}
       { relevantGamingPostCategoryData
        .map(post => (
@@ -95,21 +94,21 @@ useEffect(() => {
             </div>
             </div>
 
-            <div>
+            <div className=''>
           <Adv4 />
         </div>
 <section>
   
-<h3 className="font-bold sm:mr-4 lg:mr-8 text-2xl lg:text-2xl text-[#C27A00] mt-[-120px] md:mt-[7px] py-3 rounded-xs w-[-100px] ">Tendencias</h3>
+<h3 className="font-bold sm:mr-4 lg:mr-8 text-2xl lg:text-2xl text-[#C27A00] mt-[-10px] lg:mt-[26px] md:mt-[7px] py-3 rounded-xs w-[-100px]">Tendencias</h3>
     <div className="bg-[#C27A00] h-[7px] w-full mt-[-10px] mb-3"></div>
     <div className="lg:flex relative">
-  <div className="lg:flex-1 mb-6 lg:mt-[-43px]"> 
-    <div className="grid lg:grid-cols-2  md:grid-cols-2 md:max-w-3xl md:mr-5 sm:max-w-sm sm:mx-auto lg:max-w-7xl">   
+  <div className="lg:flex-1 mb-6 lg:mt-[-4px]"> 
+    <div className="grid lg:grid-cols-3  md:grid-cols-2 md:max-w-3xl sm:max-w-sm sm:mx-auto lg:max-w-7xl">   
 
             { gamingPostsData 
                 ? gamingPostsData.map((posts) => (
               
-                  <Notice
+                  <Card
                     key={posts.id}
                     created_at={posts.created_at}
                     title={posts.title}

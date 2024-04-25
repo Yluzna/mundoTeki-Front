@@ -107,10 +107,10 @@ relevantSciencePostCategoryData.forEach(post => {
 
 
   return (
-    <section style={{ position: 'relative' }} className='px-3'>
+    <section style={{ position: 'relative' }} className='px-2'>
       <div className='lg:flex lg:gap-4 '>
         <section style={{ flexBasis: '55%' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-1">
+          <div className="grid grid-cols-1 lg:grid-cols-1 mt-[-50px] lg:mt-[10px]">
 
             <MainArticle
               key={relevantPostData.id}
@@ -122,14 +122,18 @@ relevantSciencePostCategoryData.forEach(post => {
               category={relevantPostData.category}
 
             />
+
           </div>
+
+
         </section>
+        
 
 
 
         <section style={{ flexBasis: '30%' }}>
-          <div className="relative grid grid-cols-1 gap-1 lg:gap-1 mt-2 lg:mt-0 lg:grid-cols-1 " style={{ marginTop: '-3px' }}>
-            <h3 className="font-bold text-[#E5446D] ml-1 text-[20px]" >Últimas Noticias</h3>
+          <div className="relative grid grid-cols-1 gap-1 lg:gap-1 mt-2 lg:mt-0 md:mt-0 lg:grid-cols-1 md:grid-cols-2" style={{ marginTop: '-3px' }}>
+            <h3 className="font-bold text-[#E5446D] ml-1  text-[20px]" >Últimas Noticias</h3>
             {lastPostData && lastPostData.map((posts) => (
               <Card
                 key={posts.id}
@@ -143,7 +147,8 @@ relevantSciencePostCategoryData.forEach(post => {
           </div>
         </section>
 
-        <section style={{ position: 'absolute', top: 0, right: 12, width: '11%' }}>
+        <section style={{ position: 'absolute', top: 0, right: 12, width: '11%' }} className=''>
+          
 
           <Adv />
           <Adv />
@@ -153,13 +158,14 @@ relevantSciencePostCategoryData.forEach(post => {
           <Adv />
           <Adv />
           <Adv />
+          <Adv />
+          
         </section>
       </div>
 
       <section >
-        <div className="mb-6 flex gap-14 ml-1">
-          <Adv2 />
-          <Adv2 />
+        <div className="mb-6 flex gap-14 ml-1 md:mt-[28px] lg:mt-[-1px]">
+          <Adv3/>
         </div>
       </section>
  
