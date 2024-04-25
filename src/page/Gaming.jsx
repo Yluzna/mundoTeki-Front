@@ -47,7 +47,7 @@ useEffect(() => {
 
   return(
     <div className="px-2 py-2">
-    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-2xl text-white mb-2 mt-[-100px] md:mt-[-100px] lg:mt-[-19px]  py-1 px-4 rounded-xs w-full" >Gaming</h3>
+    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-2xl text-white mb-2 mt-[-70px] md:mt-[-70px] lg:mt-[-19px]  py-1 px-4 rounded-xs w-full" >Gaming</h3>
   
     <div className="lg:flex lg:gap-4 md:flex md:gap-2 relative">
   <div className="lg:flex-1 lg:mr-4 mb-[-8px] md:mt-[100px] lg:mt-[1px]"> {/* El primer componente ocupa más espacio */}
@@ -104,7 +104,7 @@ useEffect(() => {
     <div className="bg-[#C27A00] h-[7px] w-full mt-[-10px] mb-3"></div>
     <div className="lg:flex relative">
   <div className="lg:flex-1 mb-6 lg:mt-[-43px]"> 
-    <div className="grid lg:grid-cols-2  md:grid-col-2 sm:max-w-sm sm:mx-auto lg:max-w-7xl">   
+    <div className="grid lg:grid-cols-2  md:grid-cols-2 md:max-w-3xl md:mr-5 sm:max-w-sm sm:mx-auto lg:max-w-7xl">   
 
             { gamingPostsData 
                 ? gamingPostsData.map((posts) => (
@@ -124,7 +124,7 @@ useEffect(() => {
             }
 </div>
 </div>
-<div className="lg:flex-1/3 mb-4 mt-[-12px]"> 
+<div className="lg:flex-1/3 mb-4 mt-[-12px] md:hidden"> 
     <AdvertCategory />
   </div>
 </div>

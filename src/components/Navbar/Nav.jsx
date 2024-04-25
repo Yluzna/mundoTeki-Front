@@ -55,16 +55,16 @@ function Navbar() {
     <div className="p-6 z-50">
       {menuState.type === 'small' && (
         <>
-          <Link to="/company" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Empresas y Startups</Link>
-          <Link to="/science" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Ciencia y tecnología</Link>
-          <Link to="/culture" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Cultura y Seguridad digital</Link>
-          <Link to="/development" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Desarrollo y programación</Link>
-          <Link to="/gaming" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Gaming</Link>
-          <Link to="/last" className="transform hover:scale-110 transition-transform duration-200 p-2 rounded block">Últimas Noticias</Link>
+          <Link to="/company" className="transform hover:scale-110 hover:text-[#7BB2D9] transition-transform duration-200 p-2 rounded block">Empresas y Startups</Link>
+          <Link to="/science" className="transform hover:scale-110 hover:text-[#e11d48] transition-transform duration-200 p-2 rounded block">Ciencia y tecnología</Link>
+          <Link to="/culture" className="transform hover:scale-110 hover:text-[#2A2B2A] transition-transform duration-200  p-2 rounded block">Cultura y Seguridad digital</Link>
+          <Link to="/development" className="transform hover:scale-110 hover:text-[#16a34a] transition-transform duration-200 p-2 rounded block">Desarrollo y programación</Link>
+          <Link to="/gaming" className="transform hover:scale-110 hover:text-[#C27A00] transition-transform duration-200 p-2 rounded block">Gaming</Link>
+          <Link to="/last" className="transform hover:scale-110 hover:text-[#E5446D]  transition-transform duration-200 p-2 rounded block">Últimas Noticias</Link>
         </>
       )}
     </div>
-    <div className="fixed inset-0 bg-black opacity-25 z-40" onClick={closeModal}></div>
+    <div className="fixed inset-0 bg-white opacity-100 z-40" onClick={closeModal}></div>
  </div>
 )}
 
