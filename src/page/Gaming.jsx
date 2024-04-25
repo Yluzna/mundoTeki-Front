@@ -45,7 +45,7 @@ useEffect(() => {
 console.log(gamingPostsData)
   return(
     <div className="px-2 py-2">
-    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Gaming</h3>
+    <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[40px] py-1 px-4 rounded-xs w-full" >Gaming</h3>
   
     <div className="lg:flex lg:gap-4 md:flex md:gap-2 relative">
   <div className="lg:flex-1 lg:mr-4 mb-[-8px] md:mt-[100px] lg:mt-[-2px]"> {/* El primer componente ocupa más espacio */}
