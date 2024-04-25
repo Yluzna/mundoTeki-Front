@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const UsersTable = () => {
+const PostTable = () => {
  const [users, setUsers] = useState([]);
 
  useEffect(() => {
@@ -38,16 +38,31 @@ const UsersTable = () => {
               ID
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
-              Username
+              Title
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
-              Email
+              Content
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
-              Created At
+              Created_At
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
-              Is Active
+              Author
+            </th>
+            <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
+              Image_id
+            </th>
+            <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
+              User_id
+            </th>
+            <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
+              Category_id
+            </th>
+            <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
+              Description
+            </th>
+            <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
+              Is_active
             </th>
             <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
               Actions
@@ -70,7 +85,22 @@ const UsersTable = () => {
                 <div className="text-sm text-gray-900">{user.date_of_birth}</div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
-                <div className="text-sm text-gray-900">{user.employment.status}</div>
+                <div className="text-sm text-gray-900">{user.address.city}</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-900">{user.address.street_name}</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-900">{user.address.zip_code}</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-900">{user.subscription.term}</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-900">{user.subscription.plan}</div>
+              </td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                <div className="text-sm text-gray-900">{user.subscription.status}</div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium w-full">
                 <button onClick={() => handleEdit(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200">Editar</button>
@@ -85,4 +115,4 @@ const UsersTable = () => {
  );
 };
 
-export default UsersTable;
+export default PostTable;
