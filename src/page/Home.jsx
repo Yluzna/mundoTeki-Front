@@ -129,7 +129,7 @@ relevantSciencePostCategoryData.forEach(post => {
 
         <section style={{ flexBasis: '30%' }}>
           <div className="relative grid grid-cols-1 gap-1 lg:gap-1 mt-2 lg:mt-0 lg:grid-cols-1 " style={{ marginTop: '-3px' }}>
-            <h3 className="font-bold text-[#E5446D] ml-3 text-[20px]" >Últimas Noticias</h3>
+            <h3 className="font-bold text-[#E5446D] ml-1 text-[20px]" >Últimas Noticias</h3>
             {lastPostData && lastPostData.map((posts) => (
               <Card
                 key={posts.id}
@@ -168,9 +168,9 @@ relevantSciencePostCategoryData.forEach(post => {
         <div>
           <h3 className="font-bold bg-[#C27A00] sm:mr-34 lg:mr-32 sm:text-[25px] lg:text-[22px] text-white mb-2" >Gaming</h3>
         </div>
-        <div className='sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1'>
+        <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
         
-          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px] mr-[-9]  lg:w-[400px]" src={imagesByCategory[10]}>
+          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px]  lg:w-[400px] ml-[-9px]" src={imagesByCategory[10]}>
           </img>
 
           {relevantGamingPostCategoryData.map(post => (
@@ -190,8 +190,9 @@ relevantSciencePostCategoryData.forEach(post => {
           <h3 className="font-bold bg-[#2A2B2A] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-39px]" >Culture</h3>
         </div>
 
-        <div className="sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1">
-          <img className="object-cover lg:max-w-m  mx-auto lg:ml-[2px] sm:ml-[20px] lg:w-[400px]" src={imagesByCategory[9]}>
+        <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
+        
+          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px]  lg:w-[400px] ml-[-9px]" src={imagesByCategory[9]}>
           </img>
 
           {relevantCulturePostCategoryData.map(post => (
@@ -208,11 +209,11 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
 
         <div>
-          <h3 className="font-bold bg-[#7BB2D9] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 mt-[-39px]" >Company</h3>
+          <h3 className="font-bold bg-[#7BB2D9] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-39px]" >Company</h3>
         </div>
-        <div className="sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1">
-
-          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory[3]}>
+        <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
+        
+          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px]  lg:w-[400px] ml-[-9px]" src={imagesByCategory[3]}>
           </img>
 
           {relevantCompanyPostCategoryData.map(post => (
@@ -229,10 +230,11 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
 
         <div>
-          <h3 className="font-bold bg-[#16a34a] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 mt-[-39px]" >Development</h3>
+          <h3 className="font-bold bg-[#16a34a] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-39px]" >Development</h3>
         </div>
-        <div className="sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1">
-          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory[8]}>
+        <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
+        
+          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px]  lg:w-[400px] ml-[-9px]" src={imagesByCategory[8]}>
           </img>
 
           {relevantDevelopmentPostCategoryData.map(post => (
@@ -250,11 +252,12 @@ relevantSciencePostCategoryData.forEach(post => {
 
 
         <div>
-          <h3 className="font-bold bg-[#e11d48] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2 mt-[-39px] lg:text-[22px]" >Science</h3>
+          <h3 className="font-bold bg-[#e11d48] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2 lg:mt-[-39px] lg:text-[22px]" >Science</h3>
         </div>
 
-        <div className="sm:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 mr-[129px] lg:col-1">
-          <img className="object-cover sm:max-w-m  mx-auto lg:ml-[2px]  sm:ml-[20px] lg:w-[400px]" src={imagesByCategory[4]}>
+        <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
+        
+          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px]  lg:w-[400px] ml-[-9px]" src={imagesByCategory[4]}>
           </img>
 
           {relevantSciencePostCategoryData.map(post => (

@@ -67,7 +67,7 @@ export const getRelevantPostCategory = async (IDcategoryfront) =>{
         
         
         const listRelevant=[
-            relevantPostCategory[relevantPostCategory.length - 1], relevantPostCategory[relevantPostCategory.length - 2], relevantPostCategory[relevantPostCategory.length - 3]
+            relevantPostCategory[relevantPostCategory.length - 2], relevantPostCategory[relevantPostCategory.length - 3], relevantPostCategory[relevantPostCategory.length - 4]
 
         ]
         
