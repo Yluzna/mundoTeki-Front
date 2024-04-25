@@ -1,14 +1,43 @@
-import { useState } from 'react';
+
+
+import React, { useState } from 'react';
+import AuthService from '../../services/AuthLogin';
+import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
- const [email, setEmail] = useState('');
- const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
- const handleSubmit = (e) => {
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica de inicio de sesión, como enviar los datos al servidor
-    // console.log(´Email ${email}, Password: ${password}´);
- };
+// Verificar la longitud del nombre de usuario
+  if (email.length < 2 || email.length > 20) {
+    setError("Email must be between 2 and 20 characters");
+    return(email);
+  }else if (password.length < 2 || password.length > 20) {
+    setError("Password must be between 2 and 20 characters");
+    return(password);
+  }
+
+    const user = await AuthService.login(email, password);
+    if (user) {
+      navigate("/");
+    } else {
+      setError("User not found, please check your email or password is incorrect");
+    }
+    console.log(user)
+    
+  };
 
  return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
@@ -33,7 +62,7 @@ const Login = () => {
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Correo electrónico"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
               />
             </div>
             <div>
@@ -47,7 +76,7 @@ const Login = () => {
                 className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
                 placeholder="Contraseña"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={handlePasswordChange}
               />
             </div>
           </div>

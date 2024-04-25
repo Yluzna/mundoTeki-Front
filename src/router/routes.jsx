@@ -9,7 +9,9 @@ import HomeAdmin from '../page/Admin/HomeAdmin';
 import Users from '../page/Admin/Users';
 import Post from '../page/Admin/Post';
 import Images from '../page/Admin/Images';
-import Login from '../page/LoginRegister/Login/Login'
+import Login from '../page/LoginUser';
+import Register from '../page/RegisterUser';
+import RegisterUser from '../page/RegisterUser';
 
 export const router = createBrowserRouter([
   {
@@ -23,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: 'login',
         element: <Login />,
+      },
+      {
+        path: 'register',
+        element: <Register />,
       },
       {
         path: 'gaming',
