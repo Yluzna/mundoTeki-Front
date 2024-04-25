@@ -19,7 +19,7 @@ const CardNotice = ({ image_url, title, content, created_at, author, category,de
               >
                 {category}
               </a>
-              <span className="text-gray-600">— {created_at}</span>
+              <span className="text-gray-600">{created_at}</span>
             </p>
             <a
               href="/"
