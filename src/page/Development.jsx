@@ -17,12 +17,12 @@ const [relevantDevelopmentPostCategoryData, setRelevantDevelopmentPostCategoryDa
 const fetchPostsByCategory = async (category) => {
 
 
-  const developmentPosts = await getPostsByCategory('8');
+  const developmentPosts = await getPostsByCategory(8);
   setDevelopmentPostsData(developmentPosts);
 
 }
 const fetchPrincipalPostCategory = async () => {
-  const principalPostCategory = await getPrincipalPostCategory('8');
+  const principalPostCategory = await getPrincipalPostCategory(8);
   setPrincipalPostCategory(principalPostCategory);
 }
 

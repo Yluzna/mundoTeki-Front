@@ -4,47 +4,34 @@ import Home from '../page/Home';
 import Gaming from '../page/Gaming';
 import Development from '../page/Development';
 import Culture from '../page/Culture';
+import Science from '../page/Science';
+import Company from '../page/Company';
+import Last from '../page/Last';
 import LayoutAdmin from '../components/LayoutAdmin/LayoutAdmin';
-import NewPost from '../page/Admin/NewPost';
 import Users from '../page/Admin/Users';
 import Post from '../page/Admin/Post';
-<<<<<<< HEAD
-import Images from '../page/Admin/Images';
-import Login from '../page/LoginUser';
+import NewPost from '../page/Admin/NewPost';
 import Register from '../page/RegisterUser';
-import RegisterUser from '../page/RegisterUser';
-=======
-import Login from '../page/LoginRegister/Login/Login'
->>>>>>> 7acc74b515f7ec84ee5bab6a0c70902130df1477
+import Login from '../page/LoginUser'
 
 export const router = createBrowserRouter([
   {
-    path: '/',
-<<<<<<< HEAD
-=======
-    element: <Home />,
-  },
-  {
-    path: '/',
->>>>>>> 7acc74b515f7ec84ee5bab6a0c70902130df1477
+    path: "/",
     element: <App />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: 'login',
-        element: <Login />,
-      },
+       path: "/login",
+       element: <Login />,
+     },
+     {
+       path: "/register",
+       element: <Register />,
+     },
       {
-<<<<<<< HEAD
-        path: 'register',
-        element: <Register />,
-      },
-      {
-=======
->>>>>>> 7acc74b515f7ec84ee5bab6a0c70902130df1477
         path: 'gaming',
         element: <Gaming />,
       },
@@ -55,6 +42,18 @@ export const router = createBrowserRouter([
       {
         path: 'culture',
         element: <Culture />,
+      }, 
+      {
+        path: 'company',
+        element: <Company />,
+      },
+       {
+        path: 'science',
+        element: <Science />,
+      },
+      {
+        path: 'last',
+        element: <Last />,
       },
       {
         path: 'admin',

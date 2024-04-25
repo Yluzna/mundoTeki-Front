@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
  const location = useLocation();
- const isAdminOrLoginPage = location.pathname.includes('/admin') || location.pathname.includes('/login');
+ const isAdminOrLoginPage = location.pathname.includes('/admin') || location.pathname.includes('/login')  ||  location.pathname.includes('/Register');
 
  return (
     <>
