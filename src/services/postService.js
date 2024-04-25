@@ -1,4 +1,3 @@
-
 const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 export const getAllPosts = async () => {
@@ -67,7 +66,7 @@ export const getRelevantPostCategory = async (IDcategoryfront) =>{
         
         
         const listRelevant=[
-            relevantPostCategory[relevantPostCategory.length - 2], relevantPostCategory[relevantPostCategory.length - 3], relevantPostCategory[relevantPostCategory.length - 4]
+            relevantPostCategory[relevantPostCategory.length - 1], relevantPostCategory[relevantPostCategory.length - 2], relevantPostCategory[relevantPostCategory.length - 3]
 
         ]
         
@@ -76,10 +75,3 @@ export const getRelevantPostCategory = async (IDcategoryfront) =>{
         console.error('Error fetching data: ', error);
 }
 }
-// get post by id
-
-// create post
-
-// update post
-
-// delete post

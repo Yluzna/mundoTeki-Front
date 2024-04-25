@@ -2,7 +2,7 @@ const Notice = ({ image_url, title, content, created_at, author, category }) => 
 
   return (
 
-    <article className="flex w-[370px] lg:w-[400px] lg:flex  mt-4 ml-2">
+    <article className="flex w-[370px] lg:w-[400px] lg:flex  mt-1 md:mt-2 lg:mt-12 ml-2">
 
       <div className="flex">
         <img alt="notice" src={image_url} className="w-80 h-32 rounded-md object-cover"/>
