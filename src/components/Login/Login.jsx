@@ -36,7 +36,7 @@ const Login = () => {
         navigate(user.redirect);
       } else {
         // Redirigir a una página predeterminada si no hay una URL de redirección
-        navigate('/');
+        //navigate('/');
       }
     } else {
       setError("User not found, please check your email or password is incorrect");

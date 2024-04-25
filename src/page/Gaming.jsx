@@ -43,7 +43,8 @@ useEffect(() => {
 }, []);
 
 
-console.log(gamingPostsData)
+// console.log(principalPostCategory)
+
   return(
     <div className="px-2 py-2">
     <h3 className="font-bold bg-[#C27A00] sm:mr-4 lg:mr-8 sm:text-2xl lg:text-xl text-white mb-2 mt-[-20px] py-1 px-4 rounded-xs w-full " >Gaming</h3>
