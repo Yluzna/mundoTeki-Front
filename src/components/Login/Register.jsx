@@ -1,75 +1,89 @@
-import { useState } from "react";
-
+import React, { useState } from "react";
+import registerUser from "../../services/AuthRegister";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
- const [formData, setFormData] = useState({
-    username: '',
-    mail: '',
-    password: '',
- });
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(false);
+  const navigate = useNavigate();
 
- const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
- };
+  const handleUsernameChange = (e) => {
+    setUsername(e.target.value);
+  };
 
- const handleSubmit = (e) => {
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    // Aquí puedes agregar la lógica para manejar el envío del formulario,
-    // como enviar los datos a un servidor o almacenarlos en el estado global.
- };
+    // Verificar que todos los campos estén llenos
+    if (username === "" || password === "" || email === "") {
+      setError(true);
+      return;
+    }
 
- return (
-    <form onSubmit={handleSubmit} className="space-y-4">
+    // Construir el objeto de usuario
+    const newUser = {
+      username,
+      password,
+     
+      email,
+    };
+    const success = await registerUser(newUser);
+
+    console.log(newUser);
+    if (success) {
+      // Manejar redirección u otras acciones de éxito aquí
+      console.log('Usuario registrado exitosamente.');
+      navigate('/login');
+    } else {
+      // Manejar error de registro aquí
+      console.error('Error al registrar el usuario.');
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="username" className="block text-sm font-medium text-gray-700">
-          Nombre de usuario
-        </label>
+        <label htmlFor="username">Nombre de usuario:</label>
         <input
           type="text"
-          name="username"
           id="username"
-          value={formData.username}
-          onChange={handleChange}
-          className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+          value={username}
+          onChange={handleUsernameChange}
         />
       </div>
       <div>
-        <label htmlFor="mail" className="block text-sm font-medium text-gray-700">
-          Correo electrónico
-        </label>
-        <input
-          type="email"
-          name="mail"
-          id="mail"
-          value={formData.mail}
-          onChange={handleChange}
-          className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
-        />
-      </div>
-      <div>
-        <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-          Contraseña
-        </label>
+        <label htmlFor="password">Contraseña:</label>
         <input
           type="password"
-          name="password"
           id="password"
-          value={formData.password}
-          onChange={handleChange}
-          className="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+          value={password}
+          onChange={handlePasswordChange}
         />
       </div>
       <div>
-        <button type="submit" className="w-full p-2 bg-blue-500 text-white rounded-md">
-          Registrarse
-        </button>
+        <label htmlFor="email">Correo electrónico:</label>
+        <input
+          type="email"
+          id="email"
+          value={email}
+          onChange={handleEmailChange}
+        />
       </div>
+      {error && <p>Por favor, llene todos los campos.</p>}
+      <button type="submit">Registrarse</button>
     </form>
- );
+  );
 };
 
 export default Register;
