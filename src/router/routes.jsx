@@ -8,15 +8,25 @@ import LayoutAdmin from '../components/LayoutAdmin/LayoutAdmin';
 import NewPost from '../page/Admin/NewPost';
 import Users from '../page/Admin/Users';
 import Post from '../page/Admin/Post';
+<<<<<<< HEAD
+import Images from '../page/Admin/Images';
+import Login from '../page/LoginUser';
+import Register from '../page/RegisterUser';
+import RegisterUser from '../page/RegisterUser';
+=======
 import Login from '../page/LoginRegister/Login/Login'
+>>>>>>> 7acc74b515f7ec84ee5bab6a0c70902130df1477
 
 export const router = createBrowserRouter([
   {
     path: '/',
+<<<<<<< HEAD
+=======
     element: <Home />,
   },
   {
     path: '/',
+>>>>>>> 7acc74b515f7ec84ee5bab6a0c70902130df1477
     element: <App />,
     children: [
       {
@@ -28,10 +38,13 @@ export const router = createBrowserRouter([
         element: <Login />,
       },
       {
+<<<<<<< HEAD
         path: 'register',
         element: <Register />,
       },
       {
+=======
+>>>>>>> 7acc74b515f7ec84ee5bab6a0c70902130df1477
         path: 'gaming',
         element: <Gaming />,
       },
