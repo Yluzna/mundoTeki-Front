@@ -108,7 +108,7 @@ relevantSciencePostCategoryData.forEach(post => {
 
   return (
     <section style={{ position: 'relative' }} className='px-2'>
-      <div className='lg:flex lg:gap-4 '>
+      <div className='lg:flex lg:gap-'>
         <section style={{ flexBasis: '55%' }}>
           <div className="grid grid-cols-1 lg:grid-cols-1 mt-[-50px] lg:mt-[11px]">
 
@@ -133,7 +133,7 @@ relevantSciencePostCategoryData.forEach(post => {
 
         <section style={{ flexBasis: '30%' }}>
           <div className="relative grid grid-cols-1 gap-1 lg:gap-1 mt-2 lg:mt-0 md:mt-0 lg:grid-cols-1 md:grid-cols-2" style={{ marginTop: '-3px' }}>
-            <h3 className="font-bold text-[#E5446D] ml-1  text-[20px]" >Últimas Noticias</h3>
+            <h3 className="font-bold text-[#E5446D] lg:ml-8  text-[20px]" >Últimas Noticias</h3>
             {lastPostData && lastPostData.map((posts) => (
               <Card
                 key={posts.id}
@@ -147,33 +147,30 @@ relevantSciencePostCategoryData.forEach(post => {
           </div>
         </section>
 
-        <section style={{ position: 'absolute', top: 0, right: 12, width: '11%' }} className=''>
+        <section style={{ position: 'absolute', top: 0, right: 12, width: '14%' }} className=''>
           
 
           <Adv />
           <Adv />
-          <Adv />
-          <Adv />
-          <Adv />
-          <Adv />
-          <Adv />
-          <Adv />
-          <Adv />
+          
+         
+          
           
         </section>
       </div>
 
       <section >
-        <div className="mb-6 flex gap-14 ml-1 md:mt-[28px] lg:mt-[-1px]">
+        <div className="mb-6 flex gap-14 ml-1 md:mt-[89px] lg:mt-[-1px]">
           <Adv2/>
-          <Adv2/>
+          <Adv2 />
+          
         </div>
       </section>
  
 
       <section>
         <div>
-          <h3 className="font-bold bg-[#C27A00] sm:mr-34 lg:mr-32 sm:text-[25px] lg:text-[22px] text-white mb-2" >Gaming</h3>
+          <h3 className="font-bold bg-[#C27A00] sm:mr-34 sm:text-[25px] lg:text-[22px] text-white mb-2" >Gaming</h3>
         </div>
         <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
         
@@ -194,12 +191,12 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
         
         <div>
-          <h3 className="font-bold bg-[#2A2B2A] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-39px]" >Culture</h3>
+          <h3 className="font-bold bg-[#2A2B2A] sm:mr-34  text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-20px]" >Cultura y Seguridad digital</h3>
         </div>
 
         <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
         
-          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px]  lg:w-[400px] ml-[-9px]" src={imagesByCategory[9]}>
+          <img className="object-cover px-2 max-w-sm  mx-auto lg:ml-[2px] lg:mr-[-10px] lg:w-[400px] ml-[-9px]" src={imagesByCategory[9]}>
           </img>
 
           {relevantCulturePostCategoryData.map(post => (
@@ -216,7 +213,7 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
 
         <div>
-          <h3 className="font-bold bg-[#7BB2D9] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-39px]" >Company</h3>
+          <h3 className="font-bold bg-[#7BB2D9] sm:mr-34 text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-21px]" >Empresas y Startsups</h3>
         </div>
         <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
         
@@ -237,7 +234,7 @@ relevantSciencePostCategoryData.forEach(post => {
         </div>
 
         <div>
-          <h3 className="font-bold bg-[#16a34a] sm:mr-34 lg:mr-32 text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-39px]" >Development</h3>
+          <h3 className="font-bold bg-[#16a34a] sm:mr-34 text-[25px] lg:text-[22px] text-white mb-2 lg:mt-[-21px]" >Desarrollo y programación</h3>
         </div>
         <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>
         
@@ -259,7 +256,7 @@ relevantSciencePostCategoryData.forEach(post => {
 
 
         <div>
-          <h3 className="font-bold bg-[#e11d48] sm:mr-34 lg:mr-32 text-[25px] text-white mb-2 lg:mt-[-39px] lg:text-[22px]" >Science</h3>
+          <h3 className="font-bold bg-[#e11d48] sm:mr-34  text-[25px] text-white mb-2 lg:mt-[-21px] lg:text-[22px]" >Ciencia y tecnología</h3>
         </div>
 
         <div className='md:grid grid-cols-2 lg:grid-cols-2 grid-rows-2 lg:mr-[129px] lg:col-1 py-2 lg:py-1'>

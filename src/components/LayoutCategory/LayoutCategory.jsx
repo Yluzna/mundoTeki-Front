@@ -18,7 +18,7 @@ const LayoutCategory = ({ created_at, title, image_url, description, author }) =
               </p>
           
           </div>
-          <p className=" text-sm text-gray-1200 md:text-m lg:w-80">
+          <p className=" text-sm text-gray-1200 md:text-m lg:w-100">
             {description}
           </p>
         </div>

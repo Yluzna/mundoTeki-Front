@@ -46,7 +46,7 @@ useEffect(() => {
 
 return(
   <div className="px-2 py-2">
-  <h3 className="font-bold bg-[#E5446D] sm:mr-4 lg:mr-8 text-2xl lg:text-2xl text-white mb-2 mt-[-70px] md:mt-[-70px] lg:mt-[-19px]  py-1 px-4 rounded-xs w-full" >últimas noticias</h3>
+  <h3 className="font-bold bg-[#E5446D] sm:mr-4 lg:mr-8 text-2xl lg:text-2xl text-white mb-2 mt-[-70px] md:mt-[-70px] lg:mt-[-19px]  py-1 px-4 rounded-xs w-full" >Últimas noticias</h3>
 
   <div className="lg:flex lg:gap-4 md:flex md:gap-2 relative">
 <div className="lg:flex-1 lg:mr-4 mb-[-8px] md:mt-[100px] lg:mt-[1px]"> {/* El primer componente ocupa más espacio */}

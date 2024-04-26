@@ -69,7 +69,7 @@ useEffect(() => {
 
 
 <div>
-    <h3 className="font-bold sm:mr-4 lg:mr-8 text-2xl lg:text-xl text-[#C27A00] mt-[-30px] lg:mt-[-35px] md:mt-[-40px] py-3 rounded-xs w-[-100px] ">Ultimas Noticias</h3>
+    <h3 className="font-bold sm:mr-4 lg:mr-8 text-2xl lg:text-2xl text-[#C27A00] mt-[-30px] lg:mt-[-35px] md:mt-[-40px] py-3 rounded-xs w-[-100px] ">Ultimas Noticias</h3>
     <div className="bg-[#C27A00] h-[5px] w-full mt-[-10px] mb-6"></div>
 
   

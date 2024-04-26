@@ -49,7 +49,7 @@ const [showSubmenu, setShowSubmenu] = useState(false);
 
         <Link to="/" className="bg-gray-300 flex items-center m-2 gap-2 py-3 px-4 rounded-lg hover:bg-orange-300 transition-colors" onClick={() => handleClick}>
           <IoIosLogOut
-            style={{ color: 'orange' }} /> Cerrar Sesion
+            style={{ color: 'orange' }} /> Logged Out
         </Link>
       </nav>
       <button onClick={() => setShowmenu(!showMenu)}
