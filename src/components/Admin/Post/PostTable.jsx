@@ -103,9 +103,8 @@ const PostTable = () => {
                 <div className="text-sm text-gray-900">{user.subscription.status}</div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium w-full">
-                <button onClick={() => handleEdit(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200">Editar</button>
-                <button onClick={() => handleDelete(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200">Borrar</button>
-                <button onClick={() => handleBlock(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200">Bloquear</button>
+                <button onClick={() => handleEdit(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200 border border-gray-300">Editar</button>
+                <button onClick={() => handleDelete(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200 border border-gray-300">Eliminar</button>
               </td>
             </tr>
           ))}
