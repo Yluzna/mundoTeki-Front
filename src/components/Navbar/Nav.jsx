@@ -33,7 +33,7 @@ function Navbar() {
  }, []);
 
  return (
-    <nav className="flex items-center justify-between px-9 py-2 text-black text-center border border-b-[#c27a00]">
+    <nav className="flex items-center justify-between px-9 py-2 text-black text-center border border-b-[#c27a00] ">
       <div className="lg:hidden">
         <button onClick={toggleMenu} className="focus:outline-none hover:text-amber-600">
           {menuState.open ? <FiX size={28} /> : <FiMenu size={28} />}

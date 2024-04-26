@@ -1,7 +1,7 @@
 const Adv3 = ({ }) => {
   return (
 
-    <section className="hidden sm:flex w-60  mb-2 gap-2 bg-Black" style={{ marginTop: '-23px' }} >
+    <section className="hidden sm:flex w-60  mb-2 gap-16 bg-Black md:mt-[90px]" style={{ marginTop: '-23px' }} >
 
       <img src=".\src\images\Anuncios-lego.jpg" alt="Publicidad"/>
 

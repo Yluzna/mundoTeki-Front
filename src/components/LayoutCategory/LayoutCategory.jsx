@@ -13,12 +13,12 @@ const LayoutCategory = ({ created_at, title, image_url, description, author }) =
             /> 
               
           </div>
-              <p className="text-xl font-extrabold leading-none tracking-tight lg:text-xl xl:text-2xl mb-1">
+              <p className="text-xl font-extrabold leading-none tracking-tight lg:text-xl xl:text-2xl mb-1 lg:w-90">
                 {title}
               </p>
           
           </div>
-          <p className=" text-sm text-gray-1200 md:text-m lg:w-100">
+          <p className=" text-sm text-gray-1200 md:text-m lg:w-80">
             {description}
           </p>
         </div>

@@ -110,7 +110,7 @@ relevantSciencePostCategoryData.forEach(post => {
     <section style={{ position: 'relative' }} className='px-2'>
       <div className='lg:flex lg:gap-4 '>
         <section style={{ flexBasis: '55%' }}>
-          <div className="grid grid-cols-1 lg:grid-cols-1 mt-[-50px] lg:mt-[10px]">
+          <div className="grid grid-cols-1 lg:grid-cols-1 mt-[-50px] lg:mt-[11px]">
 
             <MainArticle
               key={relevantPostData.id}
@@ -165,7 +165,8 @@ relevantSciencePostCategoryData.forEach(post => {
 
       <section >
         <div className="mb-6 flex gap-14 ml-1 md:mt-[28px] lg:mt-[-1px]">
-          <Adv3/>
+          <Adv2/>
+          <Adv2/>
         </div>
       </section>
  
@@ -278,7 +279,7 @@ relevantSciencePostCategoryData.forEach(post => {
             />
           ))}
         </div>
-        <div>
+        <div className='lg:mt-[-20px] md:mt-[50px]'>
           <Adv3 />
         </div>
       </section>
