@@ -44,10 +44,10 @@ const UsersTable = () => {
               Email
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
-              Created At
+              Created_At
             </th>
             <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
-              Is Active
+              Is_Active
             </th>
             <th scope="col" className="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider border-b border-gray-300">
               Actions
@@ -70,11 +70,11 @@ const UsersTable = () => {
                 <div className="text-sm text-gray-900">{user.date_of_birth}</div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
-                <div className="text-sm text-gray-900">{user.address.zip_code}</div>
+                <div className="text-sm text-gray-900">{user.subscription.status}</div>
               </td>
               <td className="px-6 py-4 whitespace-nowrap text-center text-sm font-medium w-full">
                 <button onClick={() => handleEdit(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200 border border-gray-300">Editar</button>
-                <button onClick={() => handleDelete(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200 border border-gray-300">Borrar</button>
+                <button onClick={() => handleDelete(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200 border border-gray-300">Eliminar</button>
                 <button onClick={() => handleBlock(user)} className="p-2 m-2 hover:bg-orange-200 bg-gray-200 border border-gray-300">Bloquear</button>
               </td>
             </tr>

@@ -10,7 +10,7 @@ const NewPost = () => {
     image: '',
     userId: '',
     category: '',
-    isActive: 'no', // Inicialmente se establece como 'no'
+    isActive: 'no',
  });
 
  const handleChange = (e) => {
@@ -26,11 +26,12 @@ const NewPost = () => {
  };
 
  return (
-    <div className="p-4"> {/* Añade padding alrededor del formulario */}
+    <div className="p-4">
       <form onSubmit={handleSubmit} className="space-y-2">
         <div>
+          <h1 className='text-center text-xl p-2 m-5 bg-gray-200  rounded font-semibold'>Post Notice</h1>
           <label htmlFor="title" className="block text-sm font-medium text-gray-700">
-            Título de la noticia
+            Title
           </label>
           <input
             type="text"
@@ -43,7 +44,7 @@ const NewPost = () => {
         </div>
         <div>
           <label htmlFor="description" className="block text-sm font-medium text-gray-700">
-            Descripción de la noticia
+            Description
           </label>
           <textarea
             name="description"
@@ -55,7 +56,7 @@ const NewPost = () => {
         </div>
         <div>
           <label htmlFor="createdAt" className="block text-sm font-medium text-gray-700">
-            Fecha de creación
+            Date
           </label>
           <input
             type="date"
@@ -68,7 +69,7 @@ const NewPost = () => {
         </div>
         <div>
           <label htmlFor="author" className="block text-sm font-medium text-gray-700">
-            Autor de la noticia
+            Author
           </label>
           <input
             type="text"
@@ -76,12 +77,12 @@ const NewPost = () => {
             id="author"
             value={newsData.author}
             onChange={handleChange}
-            className="mt-1 block w-full p-1 border border-gray-300 rounded-md"
+            className="mt-1 block w-full p-1 border border-gray-300 rounded"
           />
         </div>
         <div>
           <label htmlFor="image" className="block text-sm font-medium text-gray-700">
-            Imagen de la noticia
+            Image
           </label>
           <input
             type="file"
@@ -93,7 +94,7 @@ const NewPost = () => {
         </div>
         <div>
           <label htmlFor="userId" className="block text-sm font-medium text-gray-700">
-            ID del usuario que la publica
+            ID_User
           </label>
           <input
             type="text"
@@ -106,7 +107,7 @@ const NewPost = () => {
         </div>
         <div>
           <label htmlFor="category" className="block text-sm font-medium text-gray-700">
-            Categoría
+            Category
           </label>
           <select
             name="category"
@@ -128,7 +129,7 @@ const NewPost = () => {
         </div>
         <div>
           <label htmlFor="isActive" className="block text-sm font-medium text-gray-700">
-            ¿Está activa?
+            ¿Is active?
           </label>
           <div className="flex items-center space-x-4">
             <input
@@ -138,9 +139,9 @@ const NewPost = () => {
               value="yes"
               checked={newsData.isActive === 'yes'}
               onChange={handleChange}
-              className="form-radio text-blue-500"
+              className="form-radio text-orange-300"
             />
-            <label htmlFor="isActiveYes" className="text-sm">Sí</label>
+            <label htmlFor="isActiveYes" className="text-sm">Yes</label>
             <input
               type="radio"
               name="isActive"
@@ -148,13 +149,13 @@ const NewPost = () => {
               value="no"
               checked={newsData.isActive === 'no'}
               onChange={handleChange}
-              className="form-radio text-blue-500"
+              className="form-radio text-orange-300"
             />
             <label htmlFor="isActiveNo" className="text-sm">No</label>
           </div>
         </div>
-        <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-          Publicar noticia
+        <button type="submit" className="bg-orange-300/50 hover:bg-orange-300 font-bold py-2 px-4 rounded">
+          Post
         </button>
       </form>
     </div>

@@ -6,11 +6,11 @@ const Header = () => {
 
  let greeting;
  if (currentHour >= 6 && currentHour < 12) {
-    greeting = "Buenos días";
+    greeting = "Good Morning";
  } else if (currentHour >= 12 && currentHour < 18) {
-    greeting = "Buenas tardes";
+    greeting = "Good afternoon";
  } else {
-    greeting = "Buenas noches";
+    greeting = "Good Night";
  }
 
  return (
@@ -19,7 +19,7 @@ const Header = () => {
         <button className="flex items-center gap-x-2">
         {greeting},
           <FaUser className="w-5 h-5" />
-          <span>Yeshi_Prinss</span>
+          <span>Alejandro_Diaz</span>
         </button>
       </nav>
     </header>
